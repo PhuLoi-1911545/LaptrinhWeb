@@ -16,6 +16,11 @@
     <!-- fOOD sEARCH Section Ends Here -->
 
     <?php
+        if (isset($_SESSION['login'])) {
+            echo $_SESSION['login'];
+            unset($_SESSION['login']);
+        }
+
         if (isset($_SESSION['order'])) {
             echo $_SESSION['order'];
             unset($_SESSION['order']);
@@ -107,7 +112,16 @@
                                     <p class="food-detail"><?php echo $description; ?></p>
                                     <br>
 
-                                    <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
+                                    <a href="
+                                        <?php
+                                            if (!isset($_SESSION['user'])) {
+                                                $_SESSION['not_login'] = "<h6 class='text-danger'> LOGIN to ORDER Food! </h6>";
+                                                echo SITEURL; ?>user_page/login.php<?php 
+                                            } else {
+                                                echo SITEURL; ?>order.php?food_id=<?php echo $id;
+                                            }
+                                        ?>
+                                    " class="btn btn-primary">Order Now</a>
                                 </div>
                             </div>
                         <?php

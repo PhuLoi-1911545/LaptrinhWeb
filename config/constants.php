@@ -3,7 +3,7 @@
     session_start();
 
     // creat constants
-    define('SITEURL', 'http://localhost/assWEB/');
+    define('SITEURL', 'http://localhost/assignmentWEB/');
     define('LOCALHOST', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');

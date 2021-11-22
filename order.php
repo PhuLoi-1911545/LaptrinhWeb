@@ -75,6 +75,9 @@
                     <div class="order-label">Address</div>
                     <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" class="input-responsive" required></textarea>
 
+                    <div class="order-label">Note</div>
+                    <textarea name="note" rows="3" placeholder="E.g. Note" class="input-responsive" required></textarea>
+
                     <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
                 </fieldset>
 
@@ -97,11 +100,12 @@
         $quantity = $_POST['qty'];
         $total = $price * $quantity;
         $order_date = date("Y-m-d h:i:sa"); // get current date and time
-        $status = "Orderred"; // orderred, on delivery, delivered, cancelled
+        $status = "Ordered"; // orderred, on delivery, delivered, cancelled
         $customer_name = $_POST['full_name'];
         $customer_contact = $_POST['contact'];
         $customer_email = $_POST['email'];
         $customer_address = $_POST['address'];
+        $note = $_POST['note'];
 
         // 2. SQL to save data in db
         $sql2 = "INSERT INTO food_order SET
@@ -114,7 +118,8 @@
             customer_name = '$customer_name',
             customer_contact = '$customer_contact',
             customer_email = '$customer_email',
-            customer_address = '$customer_address'
+            customer_address = '$customer_address',
+            note = '$note'
         ";
         $res2 = mysqli_query($connection, $sql2);
 
