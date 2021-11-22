@@ -1,0 +1,26 @@
+/* 1. Menu */
+.header ul {
+    list-style: none;
+}
+
+.header ul li a {
+    color: #ff6b81;
+    font-weight: 600;
+}
+
+.header ul li a:hover {
+    color: #ff4757;
+    text-decoration: none;
+}
+
+/* 2. Content */
+.content {
+    background-color: #f1f2f6;
+    min-height: calc(100vh - 114px);
+}
+
+/* 3. Footer */
+.footer {
+    background-color: #ff4757;
+    color: white;
+}
