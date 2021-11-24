@@ -176,7 +176,7 @@
             $quantity = $quantity + $values['quantity'];
         }
         // total
-        $order_date = date("Y-m-d h:i:sa"); // get current date and time
+        $order_date = date("Y-m-d H:i:sa"); // get current date and time
         $status = "Ordered"; // orderred, on delivery, delivered, cancelled
         $customer_name = $_POST['full_name'];
         $customer_contact = $_POST['contact'];

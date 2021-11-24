@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2021 at 09:00 AM
+-- Generation Time: Nov 24, 2021 at 02:04 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -102,22 +102,7 @@ INSERT INTO `food_order` (`id`, `food`, `price`, `quantity`, `total`, `order_dat
 (2, 'Burger Gà', '12.00', 2, '24.00', '2021-11-21 02:06:07', 'Delivered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'ttttt', 'thêm tí đường'),
 (3, 'Burger Gà', '12.00', 2, '24.00', '2021-11-22 03:35:30', 'Ordered', 'alo', '0916214677', 'caothanhluong5226@gmail.com', 'tn', 'ww'),
 (4, 'Pizza Trứng', '22.00', 10, '220.00', '2021-11-22 03:43:34', 'Delivered', 'Admin', '32323', 'luong.cao2202@hcmut.edu.vn', 'tn', 'nhiều nhiều muối'),
-(13, '1) Pizza Trứng; 2) Burger Gà; 3) ttttt; ', '22.00', 1, '90.00', '2021-11-23 03:31:13', 'Ordered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'wwww', 'thêm tí đường'),
-(14, '1) Burger Gà; 2) Pizza Trứng; ', '12.00', 2, '134.00', '2021-11-23 03:37:10', 'Ordered', 'Truong My Y', '0988227018', 'caothanhluong56@gmail.com', 'trường đông', 'thêm thịt'),
-(15, '1) Burger Gà(x1); 2) Pizza Trứng(x2); 3) iiiii(x3); ', '111.00', 6, '287.00', '2021-11-24 03:15:57', 'Ordered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'wwww', 'thêm tí đường'),
-(16, '<h6 class=\"font-weight-bold\">1</h6>) Burger Gà(x1); <h6 class=\"font-weight-bold\">2</h6>) Pizza Trứng', '34.00', 3, '56.00', '2021-11-24 03:21:15', 'Ordered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'uuuuu', 'uuuuu'),
-(17, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x1); <span class=\"font-weight-bold\">2) </span>Piz', '38.00', 4, '60.00', '2021-11-24 03:22:38', 'Ordered', 'Thanh Luong', '0916214677', 'caothanhluong56@gmail.com', 'yyyyy', 'đường'),
-(18, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x1); <span class=\"font-weight-bold\">2) </span>Piz', '111.00', 5, '210.00', '2021-11-24 03:23:45', 'Ordered', 'Thanh Luong', '0916214677', 'caothanhluong56@gmail.com', 'wwww', 'nhiều nhiều muối'),
-(19, '<h6 class=\"font-weight-bold\">1) </h6>Burger Gà(x1); <h6 class=\"font-weight-bold\">2) </h6>Pizza Trứng', '111.00', 5, '210.00', '2021-11-24 03:24:05', 'Ordered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'ww', 'ww'),
-(20, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x1); <span class=\"font-weight-bold\">2) </span>Pizza Trứng(x2); <span class=\"font-weight-bold\">3) </span>iiiii(x2); ', '111.00', 5, '210.00', '2021-11-24 03:25:58', 'Ordered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'uuuuu', 'uuuuu'),
-(21, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x1); <span class=\"font-weight-bold\">2) </span>Pizza Trứng(x5); ', '34.00', 6, '122.00', '2021-11-24 04:25:44', 'Ordered', 'Thanh Luong', '0916214677', 'caothanhluong56@gmail.com', 'Tây Ninh', 'không'),
-(22, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x1); <span class=\"font-weight-bold\">2) </span>Pizza Trứng(x5); <span class=\"font-weight-bold\">3) </span>ttttt(x2); ', '38.00', 8, '130.00', '2021-11-24 04:28:58', 'Ordered', 'Admin', '32323', 'caothanhluong5226@gmail.com', 'uuuu', 'uuuu'),
-(23, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x10); ', '12.00', 10, '120.00', '2021-11-24 04:34:34', 'Ordered', 'Admin', '0916214677', 'caothanhluong56@gmail.com', 'test', 'test'),
-(24, '<span class=\"font-weight-bold\">1) </span>Pizza Trứng(x10); <span class=\"font-weight-bold\">2) </span>Burger Gà(x2); ', '34.00', 12, '408.00', '2021-11-24 04:57:41', 'Delivered', 'Thanh Luong', '0916214677', 'caothanhluong56@gmail.com', 'tây ninh', 'không'),
-(25, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x2); <span class=\"font-weight-bold\">2) </span>Pizza Trứng(x5); ', '34.00', 7, '134.00', '2021-11-24 07:39:16', 'Ordered', 'Thanh Luong', '0916214677', 'caothanhluong56@gmail.com', 'ttttt', 'ttttt'),
-(26, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x1); <span class=\"font-weight-bold\">2) </span>Pizza Trứng(x2); <span class=\"font-weight-bold\">3) </span>ttttt(x5); <span class=\"font-weight-bold\">4) </span>iiiii(x1); ', '115.00', 9, '153.00', '2021-11-24 08:21:13', 'Ordered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'sss', 'sss'),
-(27, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x5); <span class=\"font-weight-bold\">2) </span>Pizza Trứng(x4); <span class=\"font-weight-bold\">3) </span>ttttt(x14); ', '38.00', 23, '204.00', '2021-11-24 08:50:56', 'Ordered', 'tw', '0916214677', 'caothanhluong56@gmail.com', 'iii', 'iii'),
-(28, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x2); <span class=\"font-weight-bold\">2) </span>Pizza Trứng(x2); <span class=\"font-weight-bold\">3) </span>ttttt(x2); <span class=\"font-weight-bold\">4) </span>iiiii(x1); ', '115.00', 7, '153.00', '2021-11-24 08:55:21', 'Ordered', 'Thanh Luong', '0916214677', 'caothanhluong56@gmail.com', 'uuu', 'uuu');
+(34, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x2); <span class=\"font-weight-bold\">2) </span>iiiii(x2); <span class=\"font-weight-bold\">3) </span>ttttt(x2); ', '93.00', 6, '186.00', '2021-11-24 19:46:28', 'Ordered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'ii', 'ii');
 
 -- --------------------------------------------------------
 
@@ -138,7 +123,8 @@ CREATE TABLE `manager` (
 
 INSERT INTO `manager` (`id`, `full_name`, `username`, `password`) VALUES
 (2, 'Thanh Luong', 'thanhluong', 'f288bd2c10f6fa568fa813222adf6ed8'),
-(3, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(3, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(19, 'hello', 'hello', '5d41402abc4b2a76b9719d911017c592');
 
 -- --------------------------------------------------------
 
@@ -224,13 +210,13 @@ ALTER TABLE `food`
 -- AUTO_INCREMENT for table `food_order`
 --
 ALTER TABLE `food_order`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `manager`
 --
 ALTER TABLE `manager`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `users`
