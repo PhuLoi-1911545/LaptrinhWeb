@@ -25,6 +25,7 @@
 
 .text-right{
     text-align: right;
+   
 }
 .text-center{
     text-align: center;
@@ -89,29 +90,42 @@ fieldset{
 
 
 /* CSSS for navbar section */
-
+.navbar{
+    background-color: rgb(255, 250, 250);
+    height: auto;
+}
+.container{
+    height: auto;
+    color: #ebebeb;
+}
 .logo{
     width: 10%;
-    float: left;
+    
+    float:inline-start;
 }
 .menu{
     line-height: 60px;
 }
 .menu ul{
-    list-style-type: none;
+    list-style-type:upper-alpha;
+    
 }
 
 .menu ul li{
-    display: inline;
+    display:inline;
+    /* color: blanchedalmond; */
     padding: 1%;
     font-weight: bold;
+    word-spacing: 2px;
+    margin-right: 0;
+    
 }
 
 
 /* CSS for Food SEarch Section */
 
 .food-search{
-    background-image: url(../images/search.jpg);
+    background-image: url(../images/food.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -129,6 +143,11 @@ fieldset{
 
 /* CSS for Categories */
 .categories{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+.categories-home{
+    background-color: #ffffff;
     padding: 4% 0;
 }
 
@@ -176,11 +195,26 @@ fieldset{
 
 
 /* CSS for Social */
+/* .social{
+    background-color:  rgb(58, 58, 58);
+} */
 .social ul{
     list-style-type: none;
 }
 .social ul li{
     display: inline;
+    padding: 1%;
+    text-align: left;
+}
+
+
+/* CSS for contact */
+/* .contact{
+    background-color:  rgb(58, 58, 58);
+} */
+.contact ul li{
+    display: inline-block;
+    text-align: right;
     padding: 1%;
 }
 
@@ -333,3 +367,129 @@ fieldset{
 }
 
 /* cart ver 2 */
+
+
+/* info  */
+/* .welcome{
+    /* background-image: url(../images/food.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10% ; */
+    /* background-color: rgb(238, 238, 238); 
+  }
+  .welcome-img{
+      background-image: url(../images/info.png);
+      background-size: auto;
+  }
+  .welcome-text{
+      /* background-color: #ececec;
+      background-position: bottom;
+      /* opacity:1; */
+      /* size: cover;
+      visibility: ; */ 
+      /* background-color:rgba(240, 236, 236, 0.6);
+      height: 130px; */
+       /* margin-top: 530px; 
+    margin-bottom: 0;  
+
+  } */
+ 
+
+  
+  /* .u-section-1 .u-group-1 { 
+    min-height: 150px;
+    margin-top: 530px;
+    margin-bottom: 0;
+    background-image: none;
+  }
+  
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .u-section-1 .u-text-1 {
+    font-weight: 700;
+    margin: 23px auto 0;
+  }
+  
+  .u-section-1 .u-text-2 {
+    margin: 11px auto 0;
+  } */
+
+  /* .split-section .container {
+    display:table;
+
+    
+
+    width:100%;
+    padding:10;
+}
+
+.split-section .left,
+.split-section .right {
+    display:table-cell;
+    vertical-align:middle;
+    width:50%;
+    padding: 4em;
+    box-sizing: border-box;
+}
+
+.split-section .left {
+    background-image: url(../images/info.png); 
+}
+
+.split-section .right {
+    background:#fcfcfc; 
+} */
+
+.info{
+    background-color: rgb(58, 58, 58);
+    padding: 0;
+}
+.info-text {
+    min-height: 400px;
+ 
+  }
+  
+.info-text-1 {
+    letter-spacing: 5px;
+    font-weight: 900;
+    /* font-family:lucida sans; */
+    /* font:500; */
+    width: 271px;
+    margin: 53px auto 0;
+    text-align: center;
+    color: white;
+    
+  }
+  
+.info-text-2 {
+    width: 482px;
+    margin: 53px auto 0;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    
+  }
+  
+ .yline{
+
+    /* transform-origin: center top 0px; */
+    /* align-self: center; */
+    height: 3px;
+    background-color: rgb(240, 173, 30);
+    width: 20%;
+    margin-left: 40%;  
+ 
+   
+  }
+  
+ .info-text-3 {
+    width: 820px;
+    margin: 28px auto 60px;
+    text-align: center;
+    color: white;
+  }
+  

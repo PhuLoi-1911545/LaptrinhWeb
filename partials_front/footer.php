@@ -16,13 +16,27 @@
     </section>
     <!-- social Section Ends Here -->
 
-    <!-- footer Section Starts Here -->
-    <section class="footer">
-        <div class="container text-center">
-            <p>All rights reserved. Designed By <a href="#">Vijay Thapa</a></p>
+    <section class="contact">
+        <div class="container contact-center">
+            <ul>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/24/000000/worldwide-location--v1.png"/> 268 Lý Thường Kiệt, Quận 10, Thành phố Hồ Chí Minh</a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/material-sharp/24/000000/new-post.png"/> loi.luonglucasia@hcmut.edu.vn</a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/000000/phone.png"/> 0948004065</a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/ios-glyphs/30/000000/clock.png"/> Mon - Sun: 8:00 - 20:00</a>
+                </li>
+            </ul>
         </div>
     </section>
-    <!-- footer Section Ends Here -->
+
+
+
 
 </body>
 </html>

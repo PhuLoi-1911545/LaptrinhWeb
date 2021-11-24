@@ -1,7 +1,20 @@
 <?php
     include('partials_front/header.php');
 ?>
+    <p style="margin-top: 190px;"></p>
+    <!-- fOOD sEARCH Section Starts Here -->
+    <section class="food-search text-center">
+        <div class="container">
+            
+            <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
+                <input type="search" name="search" placeholder="Search for Food.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+            </form>
 
+        </div>
+    </section>
+    <!-- fOOD sEARCH Section Ends Here -->
+    
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
         <div class="container">

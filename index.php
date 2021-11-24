@@ -1,7 +1,7 @@
 <?php
     include('partials_front/header.php');
 ?>
-
+    <p style="margin-top: 190px;"></p>
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">
@@ -27,8 +27,20 @@
         }
     ?>
 
+        <!-- info section start here -->
+    <section class="info" >
+        <div class="info-text">
+            <h1 class="info-text-1">ABOUT</h1>
+            <h2 class="info-text-2"> Family-Owned &amp; Operated</h2>
+            <hr class="yline" >
+            <p class="info-text-3"> VT2L was founded in 2021 in order to serve the​&nbsp;Bach Khoa community. Whether you’re looking to place a small order or need to fill the bellies of a large group, we have a variety of options for you to choose from. We understand that each customer has their own unique tastes and cravings, which is why we always customize our packages to satisfy each and every need.</p>
+        </div>
+    </section>
+    <!-- info section end here  -->
+
+
     <!-- CAtegories Section Starts Here -->
-    <section class="categories">
+    <section class="categories-home">
         <div class="container">
             <h2 class="text-center">Explore Foods</h2>
 
