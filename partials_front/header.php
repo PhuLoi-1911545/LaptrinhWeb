@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Website</title>
 
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -65,6 +65,7 @@
                                 
                                 ?>
                                     <a href="<?php echo SITEURL; ?>user_page/user.php?id=<?php echo $id; ?>">Personal</a></li>
+                                    <li><a href="<?php echo SITEURL; ?>cart.php">Cart</a></li>
                                     <li> <a href="<?php echo SITEURL; ?>user_page/logout.php">Logout</a>
                                 <?php
                             }

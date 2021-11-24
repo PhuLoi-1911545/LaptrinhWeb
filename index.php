@@ -122,6 +122,21 @@
                                             }
                                         ?>
                                     " class="btn btn-primary">Order Now</a>
+
+                                    <?php
+                                        if (isset($_SESSION['user'])) {
+                                            ?>
+                                                <form action="" method="POST">
+                                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                                    <input type="hidden" name="title" value="<?php echo $title; ?>">
+                                                    <input type="hidden" name="price" value="<?php echo $price; ?>">
+                                                    <input type="hidden" name="image_name" value="<?php echo $image_name; ?>">
+                                                    <input type="number" name="quantity" value="1">
+                                                    <input type="submit" value="Add to Cart" name="add_to_cart">
+                                                </form>
+                                            <?php
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         <?php
@@ -142,4 +157,37 @@
 
 <?php
     include('partials_front/footer.php');
-?>   
+?>
+
+<!-- Program -->
+<?php
+    if (isset($_POST['add_to_cart'])) {
+        if (isset($_SESSION['cart'])) {
+            $cart_array_id = array_column($_SESSION['cart'], "id");
+            
+            if (!in_array($_POST['id'], $cart_array_id)) {
+                $count = count($_SESSION['cart']);
+                $cart_array = array(
+                    'id'            => $_POST['id'],
+                    'title'         => $_POST['title'],
+                    'quantity'      => $_POST['quantity'],
+                    'price'         => $_POST['price'],
+                    'image_name'    => $_POST['image_name']
+                );
+                $_SESSION['cart'][$count] = $cart_array;
+            } else {
+                echo "<script>alert('Item already added')</script>";
+                echo("<script>location.href = '".SITEURL."';</script>");
+            }
+        } else {
+            $cart_array = array(
+                'id'            => $_POST['id'],
+                'title'         => $_POST['title'],
+                'quantity'      => $_POST['quantity'],
+                'price'         => $_POST['price'],
+                'image_name'    => $_POST['image_name']
+            );
+            $_SESSION['cart'][0] = $cart_array;
+        }       
+    }
+?>
