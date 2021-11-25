@@ -48,23 +48,23 @@
                             <div class="row w-100">
                                 <form control="" class="form-group w-100" method="POST">
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="username">Username:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="username">Username:</label>
                                         <input type="text" name="username" id="username" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $username; ?>">
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="full_name">Full name:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="full_name">Full name:</label>
                                         <input type="text" name="full_name" id="full_name" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $full_name; ?>">
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="birthday">Birthday:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="birthday">Birthday:</label>
                                         <input type="text" name="birthday" id="birthday" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $birthday; ?>">
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="phone">Phone:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="phone">Phone:</label>
                                         <input type="text" name="phone" id="phone" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $phone; ?>">
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="email">Email:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="email">Email:</label>
                                         <input type="text" name="email" id="email" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $email; ?>">
                                     </div>                                    
                                     <div class="row mb-3">

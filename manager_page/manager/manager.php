@@ -10,7 +10,7 @@
 
             <!-- Button add Manager-->
             <div class="text-center">
-                <a href="add_manager.php" class="btn btn__login w-25 mb-2 mt-2">Create New Manager</a>
+                <a href="add_manager.php" class="btn__mobile btn btn__login w-25 mb-2 mt-2">Create New Manager</a>
             </div>
 
             <!-- Display session -->
@@ -36,6 +36,7 @@
                 }
             ?>
 
+            <!-- pc and tablet -->
             <table class="table table-striped mt-3">
                 <thead>
                     <tr>
@@ -71,8 +72,8 @@
                                             <td class="text-center"><?php echo $username; ?></td>
                                             <td class="text-center">
                                                 <a href="<?php echo SITEURL; ?>manager_page/manager/change_password.php?id=<?php echo $id; ?>" class="btn btn-outline-primary">Change Password</a>
-                                                <a href="<?php echo SITEURL; ?>manager_page/manager/update_manager.php?id=<?php echo $id; ?>" class="btn btn-outline-success mx-2">Update</a>
-                                                <a href="<?php echo SITEURL; ?>manager_page/manager/delete_manager.php?id=<?php echo $id; ?>" class="btn btn-outline-danger">Delete</a>
+                                                <a href="<?php echo SITEURL; ?>manager_page/manager/update_manager.php?id=<?php echo $id; ?>" class="responsive__operation btn btn-outline-success mx-2">Update</a>
+                                                <a href="<?php echo SITEURL; ?>manager_page/manager/delete_manager.php?id=<?php echo $id; ?>" class="responsive__operation btn btn-outline-danger">Delete</a>
                                             </td>
                                         </tr>
 

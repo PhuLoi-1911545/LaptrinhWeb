@@ -15,8 +15,8 @@
                 }
             ?>
 
-            <div class="row mt-4">
-                <a href="<?php echo SITEURL; ?>manager_page/category/category.php" class="col-md-3 dashboard-link">
+            <div class="row">
+                <a href="<?php echo SITEURL; ?>manager_page/category/category.php" class="col-xl-3 col-md-6 mt-4 dashboard-link">
                     <div class="dashboard d-flex flex-column align-items-center justify-content-center">
                         <?php
                             // Get total category
@@ -30,7 +30,7 @@
                     </div>
                 </a>
 
-                <a href="<?php echo SITEURL; ?>manager_page/food/food.php" class="col-md-3 dashboard-link">
+                <a href="<?php echo SITEURL; ?>manager_page/food/food.php" class="col-xl-3 col-md-6 mt-4 dashboard-link">
                     <div class="dashboard d-flex flex-column align-items-center justify-content-center">
                         <?php
                             // Get total food
@@ -44,7 +44,7 @@
                     </div>
                 </a>
 
-                <a href="<?php echo SITEURL; ?>manager_page/order/order.php" class="col-md-3 dashboard-link">
+                <a href="<?php echo SITEURL; ?>manager_page/order/order.php" class="col-xl-3 col-md-6 mt-4 dashboard-link">
                     <div class="dashboard d-flex flex-column align-items-center justify-content-center">
                         <?php
                             // Get total order
@@ -58,7 +58,7 @@
                     </div>
                 </a>
 
-                <div class="col-md-3">
+                <div class="col-xl-3 col-md-6 mt-4">
                     <div class="dashboard d-flex flex-column align-items-center justify-content-center">
                         <?php
                             // Get total coins order have status is "delivered"

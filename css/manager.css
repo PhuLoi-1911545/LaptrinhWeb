@@ -10,7 +10,6 @@
     color: #ff6b81;
     border-radius: 5px;
     border-bottom: 5px solid transparent;
-    /* opacity: 0.6; */
     cursor: pointer;
     transition: all 0.5s ease;
 }
@@ -111,4 +110,64 @@
 /* 6. Food */
 .add-food__content {
     width: 100%;
+}
+
+/* ***** Responsive ***** */
+/* 1. tablet and mobile */
+@media (max-width: 1023px) {
+    .responsive__operation {
+        margin-top: 10px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: right;
+    }
+}
+
+/* 2. tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .header__item {
+        padding: 16px 6px 11px;
+    }
+}
+
+/* 3. mobile */
+@media (max-width: 739px) {
+    .header__item {
+        padding: 4px 6px;
+    }
+
+    .btn__mobile {
+        width: 100% !important;
+    }
+
+    .company__info {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+	    border-bottom-left-radius: 0;
+    }
+
+    .login_form {
+        border-top-right-radius: 0;
+	    border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .company__logo > h2 > i{
+        font-size: 30px !important;
+        margin-top: 10px;
+    }
+
+    .mobile__label {
+        text-align: left !important;
+        margin-left: 0 !important;
+    }
+
+    .mobile__content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .mobile__table {
+        display: none;
+    }
 }

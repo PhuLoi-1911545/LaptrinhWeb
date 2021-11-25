@@ -35,20 +35,20 @@
                             <div class="row w-100 mt-2">
                                 <form control="" class="form-group w-100" method="POST" enctype="multipart/form-data">
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="title">Title:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="title">Title:</label>
                                         <input type="text" name="title" id="title" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter Category Title'" placeholder="Enter Category Title">
                                     </div> 
                                     <div class="row d-flex align-items-center">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="image">Image:</label>
-                                        <input type="file" class="" id="image" name="image">
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="image">Image:</label>
+                                        <input type="file" class="col-md-7 pl-0" id="image" name="image">
                                     </div>
                                     <div class="row d-flex align-items-center">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="featured">Featured:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="featured">Featured:</label>
                                         <input type="radio" class="" id="featured" name="featured" value="Yes"> Yes
                                         <input type="radio" class="ml-3" id="featured" name="featured" value="No"> No
                                     </div>
                                     <div class="row d-flex align-items-center">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="active">Active:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="active">Active:</label>
                                         <input type="radio" class="" id="active" name="active" value="Yes"> Yes
                                         <input type="radio" class="ml-3" id="active" name="active" value="No"> No
                                     </div>
