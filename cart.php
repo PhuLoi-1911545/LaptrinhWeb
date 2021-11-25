@@ -1,7 +1,7 @@
 <?php
     include('partials_front/header.php');
 ?>
-
+    <p style="margin-top: 190px;"></p>
     <div class="card container">
         <div class="row">
             <!-- product -->
@@ -77,12 +77,12 @@
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col">ITEMS</div>
-                    <div class="col text-right"><?php echo $items; ?></div>
+                    <div class="col" style="color:black;">ITEMS</div>
+                    <div class="col text-right" style="color:black;"><?php echo $items; ?></div>
                 </div>
                 <div class="row">
-                    <div class="col">TOTAL PRICE</div>
-                    <div class="col text-right">
+                    <div class="col" style="color:black;">TOTAL PRICE</div>
+                    <div class="col text-right" > 
                         $<?php echo number_format($total, 2); ?>
                     </div>
                 </div>

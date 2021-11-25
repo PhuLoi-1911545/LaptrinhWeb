@@ -16,7 +16,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="0" >
     <!-- Navbar Section Starts Here -->
     <section class="navbar navbar-expand-sm  fixed-top">
-        <div class="container">
+        <div class="container navbar-choose">
             <div class="logo">
                 <!-- <a href="<?php echo SITEURL; ?>" title="Logo"> -->
                 <a class="navbar-brand" >

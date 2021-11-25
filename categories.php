@@ -14,7 +14,7 @@
         </div>
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
-    
+
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
         <div class="container">
@@ -39,7 +39,7 @@
                                     <?php
                                         if ($image_name != "") {
                                             ?>
-                                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" class="img-responsive img-curve">
+                                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" class="img-responsive img-curve img_category">
                                             <?php
                                         } else {
                                             echo "<h3 class='text-danger text-center'> Image not availables! </h3>"; 
