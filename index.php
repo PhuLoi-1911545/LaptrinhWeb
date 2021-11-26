@@ -1,17 +1,16 @@
 <?php
     include('partials_front/header.php');
 ?>
-    <p style="margin-top: 150px;"></p>
-    <!-- fOOD sEARCH Section Starts Here -->
+    <!-- <p style="margin-top: 150px;"></p> -->
+    <!-- 1. Search -->
     <section class="food-search text-center">
         <div class="container">
             <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
-                <input type="search" name="search" placeholder="Search for Food.." required>
+                <input type="search" name="search" placeholder="Search for Food.." required class="pl-5">
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>
         </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
 
     <?php
         if (isset($_SESSION['login'])) {
@@ -25,19 +24,19 @@
         }
     ?>
 
-        <!-- info section start here -->
-    <section class="info" >
-        <div class="info-text">
-            <h1 class="info-text-1">ABOUT</h1>
-            <h2 class="info-text-2"> Family-Owned &amp; Operated</h2>
-            <hr class="yline" >
-            <p class="info-text-3"> VT2L was founded in 2021 in order to serve the​&nbsp;Bach Khoa community. Whether you’re looking to place a small order or need to fill the bellies of a large group, we have a variety of options for you to choose from. We understand that each customer has their own unique tastes and cravings, which is why we always customize our packages to satisfy each and every need.</p>
+    <!-- 2. Info -->
+    <section class="info">
+        <div class="container info-text d-flex flex-column justify-content-center">
+            <h1 class="info-text-1 mb-5">ABOUT</h1>
+            <h2 class="info-text-2 d-flex justify-content-center"> Family-Owned &amp; Operated</h2>
+            <div class="d-flex justify-content-center">
+                <hr class="yline">
+            </div>            
+            <p class="info-text-3 mt-4"> VT2L was founded in 2021 in order to serve the​&nbsp;Bach Khoa community. Whether you’re looking to place a small order or need to fill the bellies of a large group, we have a variety of options for you to choose from. We understand that each customer has their own unique tastes and cravings, which is why we always customize our packages to satisfy each and every need.</p>
         </div>
     </section>
-    <!-- info section end here  -->
 
-
-    <!-- CAtegories Section Starts Here -->
+    <!-- 3. Categories-->
     <section class="categories-home">
         <div class="container">
             <h2 class="text-center">Explore Foods</h2>
@@ -81,7 +80,6 @@
             <div class="clearfix"></div>
         </div>
     </section>
-    <!-- Categories Section Ends Here -->
 
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">

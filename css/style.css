@@ -1,24 +1,14 @@
-/* 
-    Author: Vijay Thapa;
-    Theme: Restaurant Food Order;
-    version: 1.0;
-*/
-
-/* CSS for All */
+/* 1. All */
 *{
     margin: 0 0;
     padding: 0 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-/* .container{
-    width: 100%;
-    margin: 0 auto;
-    padding: 1%;
-} */
+
 .img-responsive{
-    width: 100%;
-    
+    width: 100%;   
 }
+
 .img-curve{
     border-radius: 15px;
 }
@@ -38,10 +28,10 @@
     color: white;
 }
 
-.clearfix{
+/* .clearfix{
     clear: both;
     float: none;
-}
+} */
 
 a{
     color: #ff6b81;
@@ -94,67 +84,94 @@ fieldset{
     padding: 3%;
     border-radius: 5px;
 }
-/* body{
-    padding: 0;
-} */
 
-/* CSSS for navbar section */
-.navbar{
-    background-color: rgb(255, 250, 250);
-    height: auto;
-}
-.navbar-choose{
-    display: flex;
-    justify-content: space-between;
-}
-.container{
-    /* height: auto; */
-    color: #ebebeb;
-}
-.logo{
-    width: 10%;
-    
-    float:inline-start;
-}
-.menu{
-    line-height: 60px;
-}
-.menu ul{
-    list-style-type:upper-alpha;
-    
+/* 2. Navbar */
+.header__navbar {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.menu ul li{
-    display:inline;
-    /* color: blanchedalmond; */
-    padding: 1%;
-    font-weight: bold;
-    word-spacing: 2px;
-    margin-right: 0;
-    
+.navbar__item {
+    min-width: 80px;
+    padding: 20px 20px 16px 20px;
+    color: #ff6b81;
+    border-radius: 5px;
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.navbar__item:hover {
+    color: #ff4757;
+    text-decoration: none;
+    opacity: 1;
+    background-color: rgba(194, 53, 100, 0.05);
+    border-color: rgba(255, 71, 87, 0.2);
+}
+
+.navbar__item.active {
+    color: #ff4757;
+    opacity: 1;
+    border-color: #ff4757;
+    background-color: rgba(194, 53, 100, 0.05);
 }
 
 
-/* CSS for Food SEarch Section */
-
-.food-search{
+/* 3. Search */
+.food-search {
     background-image: url(../images/food.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 13% 0;
+    padding: 22% 0;
 }
 
-.food-search input[type="search"]{
+.food-search input[type="search"] {
     width: 50%;
     padding: 1%;
     font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.food-search input[type="submit"] {
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 
-/* CSS for Categories */
+/* 4. Info */
+.info{
+    background-color: rgb(58, 58, 58);
+}
+.info-text {  
+    min-height: 450px;
+}
+  
+.info-text-1 {   
+    letter-spacing: 5px;
+    font-weight: 900;
+    text-align: center;
+    color: white;  
+}
+  
+.info-text-2 {
+    font-weight: 500;
+    color: white;  
+}
+  
+.yline{
+    height: 3px;
+    background-color: rgb(240, 173, 30);
+    width: 10%;
+}
+  
+.info-text-3 {
+    text-align: center;
+    color: white;
+}
+
+/* 5. Categories */
 .categories{
     background-color: #ececec;
     padding: 4% 0;
@@ -389,64 +406,6 @@ fieldset{
     width: 100%;
 }
 
-/* cart ver 2 */
 
-
-
-/*info*/
-
-.info{
-    background-color: rgb(58, 58, 58);
-    padding: 1;
-}
-.info-text {
-    
-    min-height: 400px;
- 
-  }
-  
-.info-text-1 {
-    
-    letter-spacing: 5px;
-    font-weight: 900;
-    /* font-family:lucida sans; */
-    /* font:500; */
-    width: 271px;
-    padding-top: 20px;
-    margin: auto ;
-    text-align: center;
-    color: white;
-    
-  }
-  
-.info-text-2 {
-    width: 482px;
-    margin: 53px auto 0;
-    font-weight: 500;
-    text-align: center;
-    color: white;
-    
-  }
-  
- .yline{
-
-    /* transform-origin: center top 0px; */
-    /* align-self: center; */
-    height: 3px;
-    background-color: rgb(240, 173, 30);
-    width: 8%;
-    margin-left: 46%; 
-
-
- 
-   
-  }
-  
- .info-text-3 {
-    width: 820px;
-    margin: 28px auto 60px;
-    text-align: center;
-    color: white;
-  }
   
   
