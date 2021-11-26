@@ -115,18 +115,27 @@
 /* ***** Responsive ***** */
 /* 1. tablet and mobile */
 @media (max-width: 1023px) {
-    .responsive__operation {
-        margin-top: 10px;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        text-align: right;
-    }
+
 }
 
 /* 2. tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
     .header__item {
         padding: 16px 6px 11px;
+    }
+
+    .responsive__operation {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: right;
+    }
+
+    .mtop-10 {
+        margin-top: 10px;
+    }
+
+    .tablet__none {
+        display: none !important;
     }
 }
 
@@ -167,7 +176,19 @@
         padding-right: 0 !important;
     }
 
-    .mobile__table {
-        display: none;
+    .mobile__none {
+        display: none !important;
+    }
+
+    .responsive__operation {
+        margin-top: 10px;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: right;
+    }
+
+    .mobile__login {
+        margin-left: 6px !important;
+        margin-right: 0 !important;
     }
 }

@@ -102,3 +102,51 @@
 .personal__content {
     width: 100%;
 }
+
+/* ***** Responsive ***** */
+/* 1. tablet and mobile */
+@media (max-width: 1023px) {
+	.mobile__login {
+		width: 100%;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* 2. tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+
+/* 3. mobile */
+@media (max-width: 739px) {
+    .header__item {
+        padding: 4px 6px;
+    }
+    
+	.company__info {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+	    border-bottom-left-radius: 0;
+    }
+
+    .login_form {
+        border-top-right-radius: 0;
+	    border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+	.company__logo > h2 > i{
+        font-size: 30px !important;
+        margin-top: 10px;
+    }
+
+	.mobile__label {
+        text-align: left !important;
+        margin-left: 0 !important;
+    }
+
+    .mobile__none {
+        display: none !important;
+    }
+}

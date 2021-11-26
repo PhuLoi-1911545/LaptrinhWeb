@@ -57,7 +57,7 @@
             ?>
 
             <!-- pc and tablet -->
-            <table class="table table-striped mt-3 mobile__table">
+            <table class="table table-striped mt-3 mobile__none">
                 <thead>
                     <tr>
                         <th scope="col" class="text-center">#</th>
@@ -131,7 +131,7 @@
                                         <td class="text-center"><?php echo $active; ?></td>
                                         <td class="text-center">
                                             <a href="<?php echo SITEURL; ?>manager_page/food/update_food.php?id=<?php echo $id; ?>" class="btn btn-outline-success">Update</a>
-                                            <a href="<?php echo SITEURL; ?>manager_page/food/delete_food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="responsive__operation btn btn-outline-danger ml-2">Delete</a>
+                                            <a href="<?php echo SITEURL; ?>manager_page/food/delete_food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class="responsive__operation mtop-10 btn btn-outline-danger ml-2">Delete</a>
                                         </td>
                                     </tr>
                                 <?php

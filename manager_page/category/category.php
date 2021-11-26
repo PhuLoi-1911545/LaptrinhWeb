@@ -50,7 +50,7 @@
                 }
             ?>
 
-            <table class="table table-striped mt-3 mobile__table">
+            <table class="table table-striped mt-3 mobile__none">
                 <thead>
                     <tr>
                         <th scope="col" class="text-center">#</th>

@@ -30,31 +30,31 @@
                             <div class="row w-100">
                                 <form control="" class="form-group w-100" method="POST">
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="full_name">Full name:</label>
+                                        <label class="col-md-3 mobile__label ml-5 col-form-label text-center" for="full_name">Full name:</label>
                                         <input type="text" name="full_name" id="full_name" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your Full Name'" placeholder="Enter your Full Name">
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="birthday">Birthday:</label>
+                                        <label class="col-md-3 mobile__label ml-5 col-form-label text-center" for="birthday">Birthday:</label>
                                         <input type="text" name="birthday" id="birthday" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your Birthday'" placeholder="Enter your Birthday">
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="phone">Phone:</label>
+                                        <label class="col-md-3 mobile__label ml-5 col-form-label text-center" for="phone">Phone:</label>
                                         <input type="text" name="phone" id="phone" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your Phone'" placeholder="Enter your Phone">
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="email">Email:</label>
+                                        <label class="col-md-3 mobile__label ml-5 col-form-label text-center" for="email">Email:</label>
                                         <input type="email" name="email" id="email" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your Email'" placeholder="Enter your Email">
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="username">Username:</label>
+                                        <label class="col-md-3 mobile__label ml-5 col-form-label text-center" for="username">Username:</label>
                                         <input type="text" name="username" id="username" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your Username'" placeholder="Enter your Username">
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="password">Password:</label>
+                                        <label class="col-md-3 mobile__label ml-5 col-form-label text-center" for="password">Password:</label>
                                         <input type="password" name="password" id="password" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your Password'" placeholder="Enter your Password">
                                     </div>
                                     <div class="row mb-3">
-                                        <input type="submit" value="Create" name="submit" class="btn btn__login mx-5 mt-3 p-2">
+                                        <input type="submit" value="Create" name="submit" class="mobile__login btn btn__login mx-5 mt-3 p-2">
                                     </div>
                                 </form>
                             </div>

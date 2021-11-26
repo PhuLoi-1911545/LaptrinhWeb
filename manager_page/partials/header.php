@@ -41,7 +41,7 @@
     <!-- Header -->
     <div class="header border-bottom">
         <div class="py-3 container">
-            <div class="mb-0 pl-0 d-flex justify-content-between">
+            <div class="mb-0 pl-0 d-flex justify-content-between align-items-center">
                 <div>
                     <div class="">
                         <a class="header__item" href="<?php echo SITEURL; ?>">
@@ -105,9 +105,9 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="d-block d-md-none">
                     <div class="">
-                        <a class="header__item header__menu d-block d-md-none text-right" href="#">
+                        <a class="header__item header__menu text-right" href="#">
                             <i class="fas fa-bars"></i>
                         </a>
                     </div>
@@ -160,7 +160,7 @@
                 Order
             </a>
         </div>
-        <div class="w-100 ml-3 mt-3 text-left">
+        <div class="w-100 ml-3 mt-3 mb-3 text-left">
             <a class="header__item" href="<?php echo SITEURL; ?>manager_page/logout.php">
                 <i class="fas fa-sign-out-alt"></i>
                 Logout

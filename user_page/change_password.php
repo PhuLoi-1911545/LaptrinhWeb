@@ -42,15 +42,15 @@
                             <div class="row w-100 mt-3">
                                 <form control="" class="form-group w-100" method="POST">
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="current_password">Current Password:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="current_password">Current Password:</label>
                                         <input type="password" name="current_password" id="current_password" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your Current Password'" placeholder="Enter your Current Password">
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="new_password">New Password:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="new_password">New Password:</label>
                                         <input type="password" name="new_password" id="new_password" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your New Password'" placeholder="Enter your New Password">
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="confirm_password">Confirm Password:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="confirm_password">Confirm Password:</label>
                                         <input type="password" name="confirm_password" id="confirm_password" class="form__input col-md-7 mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Confirm your New Password'" placeholder="Confirm your New Password">
                                     </div>  
                                     <div class="row">

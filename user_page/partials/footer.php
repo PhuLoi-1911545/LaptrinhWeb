@@ -4,5 +4,7 @@
             <p class="mb-0 text-center">2021 All rights reserved, Assignment WEB</p>
         </div>
     </div>
+
+    <script src="../js/app.js"></script>
 </body>
 </html>
