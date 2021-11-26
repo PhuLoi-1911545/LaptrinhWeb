@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="0" >
     <!-- Navbar Section Starts Here -->
-    <section class="navbar">
-        <div class="container">
+    <section class="navbar navbar-expand-sm  fixed-top">
+        <div class="container navbar-choose">
             <div class="logo">
-                <a href="<?php echo SITEURL; ?>" title="Logo">
+                <!-- <a href="<?php echo SITEURL; ?>" title="Logo"> -->
+                <a class="navbar-brand" >
                     <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
                 </a>
             </div>

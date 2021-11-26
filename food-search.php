@@ -1,7 +1,7 @@
 <?php
     include('partials_front/header.php');
 ?>
-
+    <p style="margin-top: 190px;"></p>
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">
@@ -9,7 +9,7 @@
             <?php
                 $search = $_POST['search'];
             ?>
-            <h2>Foods on Your Search <a href="#" class="text-white">"<?php echo $search; ?>"</a></h2>
+            <h2><a  class="text-white">Foods on Your Search "<?php echo $search; ?>"</a></h2>
 
         </div>
     </section>

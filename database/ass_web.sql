@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2021 at 02:04 PM
+-- Generation Time: Nov 25, 2021 at 05:43 AM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,10 +40,12 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `title`, `image_name`, `featured`, `active`) VALUES
-(1, 'Pizza', 'Category_7248.png', 'Yes', 'Yes'),
+(1, 'Pizza', 'Category_1139.jpg', 'Yes', 'Yes'),
 (2, 'Burger', 'Category_4919.jpg', 'Yes', 'Yes'),
-(3, 'Noodle', 'Category_6596.png', 'No', 'Yes'),
-(9, 'Rice', 'Category_8347.png', 'Yes', 'Yes');
+(12, 'Salad', 'Category_6737.jpg', 'Yes', 'Yes'),
+(13, 'Meat', 'Category_3494.jpg', 'Yes', 'Yes'),
+(14, 'Drink', 'Category_6610.jpg', 'Yes', 'Yes'),
+(15, 'Dessert', 'Category_9429.jpg', 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -68,9 +70,7 @@ CREATE TABLE `food` (
 
 INSERT INTO `food` (`id`, `title`, `description`, `price`, `image_name`, `category_id`, `featured`, `active`) VALUES
 (1, 'Burger Gà', 'Ngon tuyệt vời', '12.00', 'Food_4494.png', 2, 'Yes', 'Yes'),
-(2, 'Pizza Trứng', 'Bổ rẻ', '22.00', 'Food_4859.png', 1, 'Yes', 'Yes'),
-(9, 'ttttt', 'jjjjjj', '4.00', 'Food_8375.png', 3, 'Yes', 'Yes'),
-(10, 'iiiii', 'oooooo', '77.00', 'Food_1189.png', 2, 'Yes', 'Yes');
+(2, 'Pizza Trứng', 'Bổ rẻ', '22.00', 'Food_4859.png', 1, 'Yes', 'Yes');
 
 -- --------------------------------------------------------
 
@@ -80,7 +80,7 @@ INSERT INTO `food` (`id`, `title`, `description`, `price`, `image_name`, `catego
 
 CREATE TABLE `food_order` (
   `id` int(10) UNSIGNED NOT NULL,
-  `food` varchar(500) NOT NULL,
+  `food` varchar(100) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `quantity` int(11) NOT NULL,
   `total` decimal(10,2) NOT NULL,
@@ -100,9 +100,11 @@ CREATE TABLE `food_order` (
 INSERT INTO `food_order` (`id`, `food`, `price`, `quantity`, `total`, `order_date`, `status`, `customer_name`, `customer_contact`, `customer_email`, `customer_address`, `note`) VALUES
 (1, 'test22', '2.00', 3, '6.00', '2021-11-15 02:08:23', 'Delivered', 'Thanh Lương', '0916214675', 'caothanhluong56@gmail.com', '123, Phạm Hồng Thái, khu phố 4, phường Long Hoa, thị xã Hòa Thành, tỉnh Tây Ninh', 'Làm ngon ngon nha'),
 (2, 'Burger Gà', '12.00', 2, '24.00', '2021-11-21 02:06:07', 'Delivered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'ttttt', 'thêm tí đường'),
-(3, 'Burger Gà', '12.00', 2, '24.00', '2021-11-22 03:35:30', 'Ordered', 'alo', '0916214677', 'caothanhluong5226@gmail.com', 'tn', 'ww'),
+(3, 'Burger Gà', '12.00', 1, '12.00', '2021-11-22 03:35:30', 'Ordered', 'alo', '0916214677', 'caothanhluong5226@gmail.com', 'tn', ''),
 (4, 'Pizza Trứng', '22.00', 10, '220.00', '2021-11-22 03:43:34', 'Delivered', 'Admin', '32323', 'luong.cao2202@hcmut.edu.vn', 'tn', 'nhiều nhiều muối'),
-(34, '<span class=\"font-weight-bold\">1) </span>Burger Gà(x2); <span class=\"font-weight-bold\">2) </span>iiiii(x2); <span class=\"font-weight-bold\">3) </span>ttttt(x2); ', '93.00', 6, '186.00', '2021-11-24 19:46:28', 'Ordered', 'alo', '0916214677', 'caothanhluong56@gmail.com', 'ii', 'ii');
+(5, 'Pizza Trứng', '22.00', 10, '220.00', '2021-11-22 03:40:28', 'Ordered', 'PhuLoi', '0123456', 'loi.luong@yahoo.com', 'Bach KHoa', 'khong trung'),
+(6, 'Burger Gà', '12.00', 1, '12.00', '2021-11-22 03:41:49', 'Ordered', '123123qwe', 'qweqwe123', 'qweqasd@yahoo.com', 'asd1313w', 'Xin chào mọi người! Mình muốn lan tỏa năng lượng đăng kí thành công này đến mọi người. Và ai đã đăng kí thành công rồi có thể tìm bạn cùng khu cùng phòng bên dưới bình luận... Chúc mọi người buổi tối vui vẻ, ai chưa đăng kí được thì chúc đăng kí thành côn'),
+(7, '<span class=\"font-weight-bold\">1) </span>Pizza Trứng(x1); <span class=\"font-weight-bold\">2) </span>B', '34.00', 2, '34.00', '2021-11-25 10:26:53', 'Ordered', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -123,8 +125,7 @@ CREATE TABLE `manager` (
 
 INSERT INTO `manager` (`id`, `full_name`, `username`, `password`) VALUES
 (2, 'Thanh Luong', 'thanhluong', 'f288bd2c10f6fa568fa813222adf6ed8'),
-(3, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
-(19, 'hello', 'hello', '5d41402abc4b2a76b9719d911017c592');
+(3, 'Admin', 'admin', '21232f297a57a5a743894a0e4a801fc3');
 
 -- --------------------------------------------------------
 
@@ -151,7 +152,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `password`, `full_name`, `birthday`, `phone`, `email`, `rating`, `feedback`) VALUES
 (1, 'thanhluong', '9c1ad00a16a7c67e2727b471ac969e96', 'Cao Thanh Luong', '22/02/2001', '0916214675', 'caothanhluong56@gmail.com', 'Very Bad', ''),
 (2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Adminnnn', '01/01/2022', '0916214671', 'caothanhluong2222@gmail.com', 'Bad', 'tôi thực sực rất hài lòng với cách làm việc của các bạntôi thực sực rất hài lòng với cách làm việc của các bạntôi thực sực rất hài lòng với cách làm việc của các bạn'),
-(7, 'test', '098f6bcd4621d373cade4e832627b4f6', 'test', 'etsttt', '2993232', 'caothanhluong56@gmail.com', '', ''),
 (8, 'alo', '1b2ccf52b54ea2c9468ca24fbe164919', 'alo', '01/01/2000', '0916214675', 'caothanhluong56@gmail.com', '', ''),
 (9, 'aloalo', 'bc6f0aa94f722407f66281abd0f4027c', 'Thanh Luong', '01/01/2022', '0916214675', 'caothanhluong56@gmail.com', '', ''),
 (10, 'myy', '5bbb16ac99f636dfac36a7c644732c88', 'Thanh Luong', '01/01/20222', '0916214675', 'caothanhluong56@gmail.com', '', '');
@@ -198,25 +198,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `food`
 --
 ALTER TABLE `food`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `food_order`
 --
 ALTER TABLE `food_order`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `manager`
 --
 ALTER TABLE `manager`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `users`
