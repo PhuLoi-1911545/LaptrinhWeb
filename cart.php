@@ -34,7 +34,7 @@
                                             ?>
                                         </div>
                                         <div class="col-md-4">
-                                            <div class="row"><?php echo $values['title']; ?></div>
+                                            <div class="row" style="color: black;"><?php echo $values['title']; ?></div>
                                         </div>
                                         <div class="col-md-3">
                                             <a class="p-2" href="<?php echo SITEURL; ?>cart.php?action=sub_quantity&id=<?php echo $values['id']; ?>">-</a>
