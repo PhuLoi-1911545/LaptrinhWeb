@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/fontawesome-free-5.15.4/css/all.min.css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="0" >
     <!-- Navbar -->
@@ -19,7 +20,7 @@
         <div class="container d-flex justify-content-between align-items-center">
             <div class="">
                 <a class="navbar-brand" href="<?php echo SITEURL; ?>">
-                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive w-75">
+                    <img src="images/logo.jpg" alt="Restaurant Logo" class="img-responsive img__logo">
                 </a>
             </div>
 
@@ -31,7 +32,7 @@
                     <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/categories.php") { ?>  class="navbar__item active"   <?php   }?> class="navbar__item" href="<?php echo SITEURL; ?>categories.php">Categories</a>
                 </div>
                 <div>
-                    <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/foods.php") { ?>  class="navbar__item active"   <?php   }?> class="navbar__item" href="<?php echo SITEURL; ?>foods.php">Foods</a>
+                    <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/foods.php" || $_SERVER['SCRIPT_NAME']=="/assignmentWEB/category-foods.php" || $_SERVER['SCRIPT_NAME']=="/assignmentWEB/food-search.php") { ?>  class="navbar__item active"   <?php   }?> class="navbar__item" href="<?php echo SITEURL; ?>foods.php">Foods</a>
                 </div>
 
                 <?php
@@ -64,7 +65,7 @@
                             
                             ?>
                                 <a href="<?php echo SITEURL; ?>user_page/user.php?id=<?php echo $id; ?>" class="navbar__item">Personal</a></div>
-                                <div><a href="<?php echo SITEURL; ?>cart.php" class="navbar__item">Cart</a></div>
+                                <div><a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/cart.php") { ?>  class="navbar__item active"   <?php   }?> href="<?php echo SITEURL; ?>cart.php" class="navbar__item"><i class="fas fa-shopping-cart"></i></a></div>
                                 <div><a href="<?php echo SITEURL; ?>user_page/logout.php" class="navbar__item">Logout</a>
                             <?php
                         }

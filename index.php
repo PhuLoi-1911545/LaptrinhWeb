@@ -1,13 +1,12 @@
 <?php
     include('partials_front/header.php');
 ?>
-    <!-- <p style="margin-top: 150px;"></p> -->
     <!-- 1. Search -->
     <section class="food-search text-center">
         <div class="container">
             <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required class="pl-5">
-                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+                <input type="submit" name="submit" value="Search" class="btn btn__login btn__login-primary w-25">
             </form>
         </div>
     </section>
@@ -36,132 +35,134 @@
         </div>
     </section>
 
-    <!-- 3. Categories-->
+    <!-- 3. Categories -->
     <section class="categories-home">
         <div class="container">
-            <h2 class="text-center">Explore Foods</h2>
+            <h2 class="text-center info-text-1 text-dark mb-5">Explore Foods</h2>
 
-            <?php
-                // 1. SQL to display categories from db
-                $sql = "SELECT * FROM category WHERE featured='Yes' AND active='Yes' LIMIT 3";
-                $res = mysqli_query($connection, $sql);
+            <div class="row d-flex">
+                <?php
+                    // 1. SQL to display categories from db
+                    $sql = "SELECT * FROM category WHERE featured='Yes' AND active='Yes' LIMIT 3";
+                    $res = mysqli_query($connection, $sql);
 
-                $count = mysqli_num_rows($res);
+                    $count = mysqli_num_rows($res);
 
-                if ($count > 0) {
-                    while ($row = mysqli_fetch_assoc($res)) {
-                        $id = $row['id'];
-                        $title = $row['title'];
-                        $image_name = $row['image_name'];
+                    if ($count > 0) {
+                        while ($row = mysqli_fetch_assoc($res)) {
+                            $id = $row['id'];
+                            $title = $row['title'];
+                            $image_name = $row['image_name'];
 
-                        ?>
-                            <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>">
-                                <div class="box-3 float-container">
-                                    <?php
-                                        if ($image_name != "") {
-                                            ?>
-                                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" class="img-responsive img-curve img_category">
-                                            <?php
-                                        } else {
-                                            echo "<h3 class='text-danger text-center'> Image not availables! </h3>"; 
-                                        }
-                                    ?>
-
-                                    <h3 class="float-text text-white"><?php echo $title; ?></h3>
-                                </div>
-                            </a>
-                        <?php
-                    }
-                } else {
-                    echo "<h3 class='text-danger text-center'> Category not added! </h3>"; 
-                }
-            ?>
-
-            <div class="clearfix"></div>
-        </div>
-    </section>
-
-    <!-- fOOD MEnu Section Starts Here -->
-    <section class="food-menu">
-        <div class="container">
-            <h2 class="text-center">Best Selling</h2>
-
-            <?php
-                $sql2 = "SELECT * FROM food WHERE featured='Yes' AND active='Yes' LIMIT 6";
-                $res2 = mysqli_query($connection, $sql2);
-
-                $count2 = mysqli_num_rows($res2);
-
-                if ($count2 > 0) {
-                    while ($row2 = mysqli_fetch_assoc($res2)) {
-                        $id = $row2['id'];
-                        $title = $row2['title'];
-                        $description = $row2['description'];
-                        $price = $row2['price'];
-                        $image_name = $row2['image_name'];
-
-                        ?>
-                            <div class="food-menu-box">
-                                <div class="food-menu-img">
-                                    <?php
-                                        if ($image_name != "") {
-                                            ?>
-                                            <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" class="img-responsive img-curve">
-                                            <?php
-                                        } else {
-                                            echo "<h3 class='text-danger text-center'> Image not availables! </h3>"; 
-                                        }
-                                    ?>
-                                </div>
-
-                                <div class="food-menu-desc">
-                                    <h4><?php echo $title; ?></h4>
-                                    <p class="food-price"><?php echo "$".$price; ?></p>
-                                    <p class="food-detail"><?php echo $description; ?></p>
-                                    <br>
-
-                                    <a href="
+                            ?>
+                                <a href="<?php echo SITEURL; ?>category-foods.php?category_id=<?php echo $id; ?>" class="col-md-4 mt-3">
+                                    <div class="float-container text-center">
                                         <?php
-                                            if (!isset($_SESSION['user'])) {
-                                                $_SESSION['not_login'] = "<h6 class='text-danger'> LOGIN to ORDER Food! </h6>";
-                                                echo SITEURL; ?>user_page/login.php<?php 
+                                            if ($image_name != "") {
+                                                ?>
+                                                <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" class="img-responsive img_category">
+                                                <?php
                                             } else {
-                                                echo SITEURL; ?>order.php?food_id=<?php echo $id;
+                                                echo "<h3 class='text-danger text-center'> Image not availables! </h3>"; 
                                             }
                                         ?>
-                                    " class="btn btn-primary">Order Now</a>
 
-                                    <?php
-                                        if (isset($_SESSION['user'])) {
-                                            ?>
-                                                <form action="" method="POST">
-                                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
-                                                    <input type="hidden" name="title" value="<?php echo $title; ?>">
-                                                    <input type="hidden" name="price" value="<?php echo $price; ?>">
-                                                    <input type="hidden" name="image_name" value="<?php echo $image_name; ?>">
-                                                    <input type="number" name="quantity" value="1">
-                                                    <input type="submit" value="Add to Cart" name="add_to_cart">
-                                                </form>
-                                            <?php
-                                        }
-                                    ?>
-                                </div>
-                            </div>
-                        <?php
+                                        <h3 class="categories__title text-white"><?php echo $title; ?></h3>
+                                    </div>
+                                </a>
+                            <?php
+                        }
+                    } else {
+                        echo "<h3 class='text-danger text-center'> Category not added! </h3>"; 
                     }
-                } else {
-                    echo "<h3 class='text-danger text-center'> Food not availables! </h3>"; 
-                }
-            ?>
-
-            <div class="clearfix"></div>
+                ?>
+            </div>
         </div>
-
-        <p class="text-center">
-            <a href="<?php echo SITEURL; ?>foods.php?>">See All Foods</a>
-        </p>
     </section>
-    <!-- fOOD Menu Section Ends Here -->
+
+    <!-- 4. Food -->
+    <section class="food-home">
+        <div class="container">
+            <h2 class="text-center info-text-1 text-dark mb-5">Best Selling</h2>
+
+            <div class="row">
+                <?php
+                    $sql2 = "SELECT * FROM food WHERE featured='Yes' AND active='Yes' LIMIT 6";
+                    $res2 = mysqli_query($connection, $sql2);
+
+                    $count2 = mysqli_num_rows($res2);
+
+                    if ($count2 > 0) {
+                        while ($row2 = mysqli_fetch_assoc($res2)) {
+                            $id = $row2['id'];
+                            $title = $row2['title'];
+                            $description = $row2['description'];
+                            $price = $row2['price'];
+                            $image_name = $row2['image_name'];
+
+                            ?>
+                                <div class="col-md-6">
+                                    <div class="food-menu-box">
+                                        <div class="row">
+                                            <div class="col-md-4 d-flex align-items-center">
+                                                <?php
+                                                    if ($image_name != "") {
+                                                        ?>
+                                                        <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" class="img-responsive img-curve h-100 img__food">
+                                                        <?php
+                                                    } else {
+                                                        echo "<h3 class='text-danger text-center'> Image not availables! </h3>"; 
+                                                    }
+                                                ?>
+                                            </div>
+
+                                            <div class="col-md-8 d-flex flex-column justify-content-center my-3">
+                                                <h4 class="mb-0"><?php echo $title; ?></h4>
+                                                <p class="m-0 mb-3 food-detail"><?php echo $description; ?></p>
+                                                <p class="m-0">Price: <?php echo "$".$price; ?></p>                                              
+                                                <?php
+                                                    if (isset($_SESSION['user'])) {
+                                                        ?>
+                                                            <form action="" method="POST" class="mt-2">
+                                                                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                                                <input type="hidden" name="title" value="<?php echo $title; ?>">
+                                                                <input type="hidden" name="price" value="<?php echo $price; ?>">
+                                                                <input type="hidden" name="image_name" value="<?php echo $image_name; ?>">
+                                                                <input class="form__input w-25 pl-3 rounded" type="number" name="quantity" value="1">
+                                                                <input class="btn btn__login btn__login-primary w-50 ml-2 rounded" type="submit" value="Add to Cart" name="add_to_cart">
+                                                            </form>
+                                                        <?php
+                                                    }
+                                                ?>
+                                            </div>
+                                        </div>
+                                        <a href="
+                                            <?php
+                                                if (!isset($_SESSION['user'])) {
+                                                    $_SESSION['not_login'] = "<h6 class='text-danger'> LOGIN to ORDER Food! </h6>";
+                                                    echo SITEURL; ?>user_page/login.php<?php 
+                                                } else {
+                                                    echo SITEURL; ?>order.php?food_id=<?php echo $id;
+                                                }
+                                            ?>
+                                        " class="btn btn__login btn__login-primary btn__order">Order Now
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php
+                        }
+                    } else {
+                        echo "<h3 class='text-danger text-center'> Food not availables! </h3>"; 
+                    }
+                ?>
+            </div>
+
+            <p class="text-center mt-5">
+                <a href="<?php echo SITEURL; ?>foods.php?>">See All Foods</a>
+            </p>
+        </div>
+      
+    </section>
 
 <?php
     include('partials_front/footer.php');

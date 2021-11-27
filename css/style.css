@@ -9,10 +9,6 @@
     width: 100%;   
 }
 
-.img-curve{
-    border-radius: 15px;
-}
-
 .text-right{
     text-align: right;
     color: black;
@@ -28,17 +24,17 @@
     color: white;
 }
 
-/* .clearfix{
-    clear: both;
-    float: none;
-} */
+.text__primary {
+    color: #ff4757 !important;
+}
 
 a{
     color: #ff6b81;
     text-decoration: none;
 }
-a:hover{
+a:hover {
     color: #ff4757;
+    text-decoration: none;
 }
 
 .btn{
@@ -47,15 +43,7 @@ a:hover{
     font-size: 1rem;
     border-radius: 5px;
 }
-.btn-primary{
-    background-color: #ff6b81;
-    color: white;
-    cursor: pointer;
-}
-.btn-primary:hover{
-    color: white;
-    background-color: #ff4757;
-}
+
 h2{
     color: #2f3542;
     font-size: 2rem;
@@ -73,10 +61,8 @@ h4{
 }
 .float-text{
     position:relative;
-    font-weight: 700;
-   
+    font-weight: 700;  
     bottom: 50px;
-    left: 40%;
 }
 fieldset{
     border: 1px solid white;
@@ -91,9 +77,13 @@ fieldset{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.img__logo {
+    width: 80px;
+}
+
 .navbar__item {
     min-width: 80px;
-    padding: 20px 20px 16px 20px;
+    padding: 34px 20px 27px 20px;
     color: #ff6b81;
     border-radius: 5px;
     border-bottom: 5px solid transparent;
@@ -172,87 +162,62 @@ fieldset{
 }
 
 /* 5. Categories */
-.categories{
-    background-color: #ececec;
+.categories-home {
+    background-color: white;
     padding: 4% 0;
 }
-.categories-home{
-    background-color: #ffffff;
-    padding: 4% 0;
-}
-.img_category{
+
+.img_category {
     width: 300px;
     height: 300px;
-}
-.box-3{
-    width: 28%;
-    float: left;
-    margin: 2%;
+    border-radius: 30px;
 }
 
+.categories__title {
+    position:relative;
+    font-weight: 700;  
+    bottom: 50px;
+}
 
-/* CSS for Food Menu */
-.food-menu{
+/* 6. Food */
+.food-home {
     background-color: #ececec;
     padding: 4% 0;
 }
-.food-menu-box{
-    width: 43%;
-    margin: 1%;
-    padding: 2%;
-    float: left;
+
+.food-menu-box {
     background-color: white;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
-.food-menu-img{
-    width: 20%;
-    min-height: 100%;
-    float: left;
+.img__food {
+    border-top-left-radius: 10px;
 }
 
-.food-menu-desc{
-    width: 70%;
-    float: left;
-    margin-left: 8%;
-}
-
-.food-price{
-    font-size: 1.2rem;
-    margin: 2% 0;
-    color: black;
-}
-.food-detail{
+.food-detail {
     font-size: 1rem;
     color: #747d8c;
 }
 
-
-/* CSS for Social */
-.social{
-    background-color:  rgb(58, 58, 58);
-    height: 130px;
-    padding-top: 30px;
-
-}
-.social ul{
-    list-style-type: none;
-}
-.social ul li{
-    display: inline;
-    padding: 1%;
-    text-align: left;
+.btn__order {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
 }
 
-
-/* CSS for contact */
-.contact{
-    background-color:  rgb(58, 58, 58);
+/* 7. Footer */
+.footer {
+    background-color:  #e0e0e0;
 }
-.contact ul li{
-    display: inline;
-    text-align: center;
-    padding: 1%;
+
+.footer ul li {
+    list-style: none;
+}
+
+.btn__socials {
+    width: 50px !important;
+    height: 50px !important;
 }
 
 /* for Order Section */
@@ -331,7 +296,13 @@ fieldset{
     }
 }
 
-/* Cart order */
+/* 8. Cart */
+.card__content {
+    margin-top: 250px;
+    margin-bottom: 150px;
+    border-radius: 30px;
+}
+
 .main-content{
 	width: 80%;
     min-height: 400px;
@@ -339,7 +310,6 @@ fieldset{
 	box-shadow: 0 5px 5px rgba(0,0,0,.4);
    
 }
-
 
 .company__info{
 	background-color: #ff4757;
@@ -386,6 +356,16 @@ fieldset{
 .btn__login:focus{
 	background-color: #ff4757;
 	color:#fff;
+}
+
+.btn__login-primary {
+    background-color: #ff4757;
+    color: white;
+}
+
+.btn__login-primary:hover {
+    background-color: white;
+    color: #ff4757;
 }
 
 /* 5. Dashboard */

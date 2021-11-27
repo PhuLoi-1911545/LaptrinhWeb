@@ -1,12 +1,11 @@
 <?php
     include('partials_front/header.php');
 ?>
-    <p style="margin-top: 190px;"></p>
-    <div class="card container">
+    <div class="container card__content border">
         <div class="row">
             <!-- product -->
             <div class="col-md-8">
-                <div class="title border-bottom">
+                <div class="title border-bottom py-3">
                     <div class="row">
                         <div class="col">
                             <h4><b>Shopping Cart</b></h4>
@@ -67,7 +66,7 @@
 
             <!-- sumarry -->
             <div class="col-md-4 summary">
-                <div class="title border-bottom">
+                <div class="title border-bottom py-3">
                     <div class="row">
                         <div class="col">
                             <h4><b>Sumarry</b></h4>
@@ -104,7 +103,7 @@
                         <input type="text" name="note" id="note" class="form__input mb-3 p-2 pl-4" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your Note'" placeholder="Enter your Note">
                     </div>
                     <div class="row mb-3">
-                        <input type="submit" value="Order" name="submit" class="btn btn__login mx-5 mt-3 p-2">
+                        <input type="submit" value="Order" name="submit" class="btn btn__login btn__login-primary mx-5 mt-3 p-2">
                     </div>
                 </form>
             </div>
