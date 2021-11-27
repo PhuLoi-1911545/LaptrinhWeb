@@ -1,6 +1,7 @@
 <?php
     include('partials_front/header.php');
 ?>
+    <section class="food-order">
     <div class="container card__content border">
         <div class="row">
             <!-- product -->
@@ -8,7 +9,7 @@
                 <div class="title border-bottom py-3">
                     <div class="row">
                         <div class="col">
-                            <h4><b>Shopping Cart</b></h4>
+                            <h4 class="text-white"><b>Shopping Cart</b></h4>
                         </div>
                     </div>
                 </div>
@@ -69,19 +70,19 @@
                 <div class="title border-bottom py-3">
                     <div class="row">
                         <div class="col">
-                            <h4><b>Sumarry</b></h4>
+                            <h4 class="text-white"><b>Sumarry</b></h4>
                         </div>
-                        <div class="col align-self-center text-right text-muted"><?php echo $items; ?> items</div>
+                        <div class="col align-self-center text-right text-white"><?php echo $items; ?> items</div>
                     </div>
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col" style="color:black;">ITEMS</div>
-                    <div class="col text-right" style="color:black;"><?php echo $items; ?></div>
+                    <div class="col text-white">ITEMS</div>
+                    <div class="col text-right text-white"><?php echo $items; ?></div>
                 </div>
                 <div class="row">
-                    <div class="col" style="color:black;">TOTAL PRICE</div>
-                    <div class="col text-right" > 
+                    <div class="col text-white">TOTAL PRICE</div>
+                    <div class="col text-right text-white" > 
                         $<?php echo number_format($total, 2); ?>
                     </div>
                 </div>
@@ -109,6 +110,7 @@
             </div>
         </div>
     </div>
+    </section>
 
 <?php
     include('partials_front/footer.php');

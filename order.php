@@ -25,9 +25,9 @@
     }
 ?>
 
-    <!-- fOOD sEARCH Section Starts Here -->
-    <section class="food-search">
-        <div class="container">
+    <!-- 1. Food -->
+    <section class="food-order">
+        <div class="container text-white">
             
             <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
 
@@ -39,7 +39,7 @@
                         <?php
                             if ($image_name != "") {
                                 ?>
-                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" class="img-responsive img-curve">
+                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" class="img-responsive img-curve w-50">
                                 <?php
                             } else {
                                 echo "<h3 class='text-danger text-center'> Image not availables! </h3>"; 
@@ -47,7 +47,7 @@
                         ?>
                     </div>
     
-                    <div class="food-menu-desc">
+                    <div class="food-menu-desc mt-3">
                         <h3><?php echo $title; ?></h3>
                         <input type="hidden" name="food" value="<?php echo $title; ?>">
 
@@ -64,21 +64,21 @@
                 <fieldset>
                     <legend>Delivery Details</legend>
                     <div class="order-label">Full Name</div>
-                    <input type="text" name="full_name" placeholder="E.g. Vijay Thapa" class="input-responsive" required>
+                    <input type="text" name="full_name" class="input-responsive" required onfocus="this.placeholder=''" onblur="this.placeholder='Your Full Name'" placeholder="Username">
 
-                    <div class="order-label">Phone Number</div>
-                    <input type="tel" name="contact" placeholder="E.g. 9843xxxxxx" class="input-responsive" required>
+                    <div class="order-label">Phone</div>
+                    <input type="tel" name="contact" class="input-responsive" required onfocus="this.placeholder=''" onblur="this.placeholder='Your Phone'" placeholder="Your Phone">
 
                     <div class="order-label">Email</div>
-                    <input type="email" name="email" placeholder="E.g. hi@vijaythapa.com" class="input-responsive" required>
+                    <input type="email" name="email" class="input-responsive" required onfocus="this.placeholder=''" onblur="this.placeholder='Your Email'" placeholder="Your Email">
 
                     <div class="order-label">Address</div>
-                    <textarea name="address" rows="10" placeholder="E.g. Street, City, Country" class="input-responsive" required></textarea>
+                    <textarea name="address" rows="10" class="input-responsive" required onfocus="this.placeholder=''" onblur="this.placeholder='Your Address'" placeholder="Your Address"></textarea>
 
                     <div class="order-label">Note</div>
-                    <textarea name="note" rows="3" placeholder="E.g. Note" class="input-responsive" required></textarea>
+                    <textarea name="note" rows="3" class="input-responsive" required onfocus="this.placeholder=''" onblur="this.placeholder='Your Note'" placeholder="Your Note"></textarea>
 
-                    <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
+                    <input type="submit" name="submit" value="Confirm Order" class="btn btn__login btn__login-primary">
                 </fieldset>
 
             </form>

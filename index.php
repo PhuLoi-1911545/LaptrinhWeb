@@ -3,6 +3,17 @@
 ?>
     <!-- 1. Search -->
     <section class="food-search text-center">
+        <?php
+            if (isset($_SESSION['login'])) {
+                echo $_SESSION['login'];
+                unset($_SESSION['login']);
+            }
+
+            if (isset($_SESSION['order'])) {
+                echo $_SESSION['order'];
+                unset($_SESSION['order']);
+            }
+        ?>
         <div class="container">
             <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required class="pl-5">
@@ -10,18 +21,6 @@
             </form>
         </div>
     </section>
-
-    <?php
-        if (isset($_SESSION['login'])) {
-            echo $_SESSION['login'];
-            unset($_SESSION['login']);
-        }
-
-        if (isset($_SESSION['order'])) {
-            echo $_SESSION['order'];
-            unset($_SESSION['order']);
-        }
-    ?>
 
     <!-- 2. Info -->
     <section class="info">
@@ -133,9 +132,9 @@
                                                             </form>
                                                         <?php
                                                     }
-                                                ?>
-                                            </div>
-                                        </div>
+                                                ?>                                               
+                                            </div>                                          
+                                        </div>   
                                         <a href="
                                             <?php
                                                 if (!isset($_SESSION['user'])) {
@@ -146,7 +145,7 @@
                                                 }
                                             ?>
                                         " class="btn btn__login btn__login-primary btn__order">Order Now
-                                        </a>
+                                        </a>                                  
                                     </div>
                                 </div>
                             <?php

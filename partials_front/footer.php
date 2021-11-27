@@ -5,12 +5,9 @@
                 <section class="text-secondary">
                     <div class="row pt-5">
                         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                            <h5 class="text-uppercase mb-3 info-text-1 text-dark h6">FOOTER CONTENT</h5>
+                            <h5 class="text-uppercase mb-3 info-text-1 text-dark h6">ABOUT</h5>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Molestiae modi cum ipsam ad, illo possimus laborum ut
-                                reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
-                                Reiciendis assumenda iusto sapiente inventore animi?
+                                VT2L was founded in 2021 in order to serve the​ Bach Khoa community. Whether you’re looking to place a small order or need to fill the bellies of a large group, we have a variety of options for you to choose from. We understand that each customer has their own unique tastes and cravings, which is why we always customize our packages to satisfy each and every need.
                             </p>
                         </div>
 
@@ -20,15 +17,11 @@
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-3">
                                     <i class="fas fa-clock"></i>
-                                    Mon - Sun: 8:00 - 20:00
+                                    Mon - Fri: 8:00am - 8:00pm
                                 </li>
-                                <li class="mb-3">
+                                <li class="">
                                     <i class="fas fa-clock"></i>
-                                    Mon - Sun: 8:00 - 20:00
-                                </li>
-                                <li class="mb-3">
-                                    <i class="fas fa-clock"></i>
-                                    Mon - Sun: 8:00 - 20:00
+                                    Sat - Sun: 8:00am - 11:00pm
                                 </li>
                             </ul>
                         </div>
@@ -39,13 +32,13 @@
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-3">
                                     <i class="fas fa-home"></i>
-                                    268 Lý Thường Kiệt, q.10, Hồ Chí Minh city
+                                    268 Ly Thuong Kiet, district 10, Ho Chi Minh City
                                 </li>
                                 <li class="mb-3">
                                     <i class="fas fa-envelope"></i>
                                     loi.luonglucasia@hcmut.edu.vn
                                 </li>
-                                <li class="mb-3">
+                                <li class="">
                                     <i class="fas fa-phone-alt"></i>
                                     0948004065
                                 </li>

@@ -168,7 +168,6 @@ fieldset{
 }
 
 .img_category {
-    width: 300px;
     height: 300px;
     border-radius: 30px;
 }
@@ -187,11 +186,11 @@ fieldset{
 
 .food-menu-box {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .img__food {
-    border-top-left-radius: 10px;
+    border-top-left-radius: 20px;
 }
 
 .food-detail {
@@ -202,8 +201,8 @@ fieldset{
 .btn__order {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
-    border-bottom-left-radius: 10px !important;
-    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
 }
 
 /* 7. Footer */
@@ -220,19 +219,30 @@ fieldset{
     height: 50px !important;
 }
 
-/* for Order Section */
+/* 8. Orrder */
+.food-order {
+    background-image: url(../images/order.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10% 0;
+}
+
 .order{
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
 }
+
 .input-responsive{
-    width: 96%;
+    width: 100%;
     padding: 1%;
     margin-bottom: 3%;
     border: none;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 1rem;
+    padding-left: 30px;
 }
+
 .order-label{
     margin-bottom: 1%; 
     font-weight: bold;
@@ -242,7 +252,7 @@ fieldset{
 
 /* CSS for Mobile Size or Smaller Screen */
 
-@media only screen and (max-width:768px){
+/* @media only screen and (max-width:768px){
     .logo{
         width: 80%;
         float: none;
@@ -294,12 +304,10 @@ fieldset{
     .order{
         width: 100%;
     }
-}
+} */
 
-/* 8. Cart */
+/* 9. Cart */
 .card__content {
-    margin-top: 250px;
-    margin-bottom: 150px;
     border-radius: 30px;
 }
 
@@ -369,7 +377,7 @@ fieldset{
 }
 
 /* 5. Dashboard */
-.dashboard-link:hover {
+/* .dashboard-link:hover {
     text-decoration: none;
     opacity: 0.9;
 }
@@ -379,13 +387,27 @@ fieldset{
     min-height: 400px;
     color: white;
     border-radius: 30px;
-}
+} */
 
 /* 6. Food */
-.add-food__content {
+/* .add-food__content {
     width: 100%;
+} */
+
+/* ***** Responsive ***** */
+/* 1. tablet and mobile */
+@media (max-width: 1023px) {
+
 }
 
+/* 2. tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .food-order {
+        padding: 20% 0;
+    }
+}
+  
+/* 3. mobile */
+@media (max-width: 739px) {
 
-  
-  
+}  
