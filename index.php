@@ -16,6 +16,7 @@
         if (isset($_SESSION['login'])) {
             echo $_SESSION['login'];
             unset($_SESSION['login']);
+            //
         }
 
         if (isset($_SESSION['order'])) {
