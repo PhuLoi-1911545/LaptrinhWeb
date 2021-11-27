@@ -409,5 +409,7 @@ fieldset{
   
 /* 3. mobile */
 @media (max-width: 739px) {
-
+    .navbar__item {
+        padding: 0 20px;
+    }
 }  

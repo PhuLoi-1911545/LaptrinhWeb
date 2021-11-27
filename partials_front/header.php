@@ -24,7 +24,8 @@
                 </a>
             </div>
 
-            <div class="menu d-flex">
+            <!-- pc and tablet -->
+            <div class="menu d-none d-md-flex">
                 <div>
                     <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/index.php") { ?>  class="navbar__item active"   <?php   }?> class="navbar__item" href="<?php echo SITEURL; ?>">Home</a>
                 </div>
@@ -44,7 +45,6 @@
                         <?php
                     }
                 ?>
-
                 
                 <div>
                     <?php
@@ -73,6 +73,61 @@
                 </div>
             </div>
 
-            <!-- <div class="clearfix"></div> -->
+            <div class="d-block d-md-none">
+                    <div class="">
+                        <a class="navbar__item header__menu text-right" href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+            </div>           
+        </div>
+
+        <!-- mobile -->
+        <div class="mobile__navbar menu d-none flex-column d-md-none">
+            <div>
+                <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/index.php") { ?>  class="navbar__item active"   <?php   }?> class="navbar__item" href="<?php echo SITEURL; ?>">Home</a>
+            </div>
+            <div class="mt-2">
+                <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/categories.php") { ?>  class="navbar__item active"   <?php   }?> class="navbar__item" href="<?php echo SITEURL; ?>categories.php">Categories</a>
+            </div>
+            <div class="mt-2">
+                <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/foods.php" || $_SERVER['SCRIPT_NAME']=="/assignmentWEB/category-foods.php" || $_SERVER['SCRIPT_NAME']=="/assignmentWEB/food-search.php") { ?>  class="navbar__item active"   <?php   }?> class="navbar__item" href="<?php echo SITEURL; ?>foods.php">Foods</a>
+            </div>
+
+            <?php
+                if (isset($_SESSION['manager'])) {
+                    ?>
+                        <div class="mt-2">
+                            <a href="<?php echo SITEURL; ?>manager_page/" class="navbar__item">Manager</a>
+                        </div>
+                    <?php
+                }
+            ?>
+            
+            <div class="mt-2">
+                <?php
+                    if (!isset($_SESSION['user'])) {
+                        ?>
+                            <a href="<?php echo SITEURL; ?>user_page/login.php" class="navbar__item">Login</a>
+                        <?php
+                    } else { 
+                        // Get ID user
+                        $username = $_SESSION['user'];
+                        $sql = "SELECT * FROM users WHERE username = '$username'";
+                        $res = mysqli_query($connection, $sql);
+                        $count = mysqli_num_rows($res);
+                        if ($count == 1) {
+                            $row = mysqli_fetch_assoc($res);
+                            $id = $row['id'];                                  
+                        }
+                        
+                        ?>
+                            <a href="<?php echo SITEURL; ?>user_page/user.php?id=<?php echo $id; ?>" class="navbar__item">Personal</a></div>
+                            <div class="mt-2"><a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/cart.php") { ?>  class="navbar__item active"   <?php   }?> href="<?php echo SITEURL; ?>cart.php" class="navbar__item"><i class="fas fa-shopping-cart"></i></a></div>
+                            <div class="mt-2"><a href="<?php echo SITEURL; ?>user_page/logout.php" class="navbar__item">Logout</a>
+                        <?php
+                    }
+                ?>                  
+            </div>
         </div>
     </section>
