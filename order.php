@@ -124,7 +124,7 @@
         $res2 = mysqli_query($connection, $sql2);
 
         if ($res2 == TRUE) {
-            $_SESSION['order'] = "<h3 class='text-success text-center'> Food ordered successfully! </h3>"; //display message
+            $_SESSION['order'] = "<h3 class='login-success text-center'> Food ordered successfully! </h3>"; //display message
             echo("<script>location.href = '".SITEURL."';</script>");
         } else {
             $_SESSION['order'] = "<h3 class='text-danger text-center'> Failed to order Food! </h3>"; //display message

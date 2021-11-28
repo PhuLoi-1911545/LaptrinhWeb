@@ -3,7 +3,7 @@
 ?>
 
     <!-- 1. Search -->
-    <section class="food-search text-center">
+    <section class="food-search img-search text-center">
         <div class="container">
             
             <?php

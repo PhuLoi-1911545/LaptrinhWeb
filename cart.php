@@ -201,7 +201,7 @@
         ";
         $res = mysqli_query($connection, $sql);
         if ($res == TRUE) {
-            $_SESSION['order'] = "<h3 class='text-success text-center'> Cart ordered successfully! </h3>";
+            $_SESSION['order'] = "<h3 class='login-success text-center'> Cart ordered successfully! </h3>";
             unset($_SESSION['cart']);
             echo("<script>location.href = '".SITEURL."';</script>");
         } else {
