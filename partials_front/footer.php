@@ -50,27 +50,27 @@
 
                 <!-- Section: Social media -->
                 <section class="mb-4 text-center">
-                    <a class="btn btn__login btn__socials rounded-circle" href="#">
+                    <a class="btn btn__login btn__socials btn__socials-mobile rounded-circle" href="#">
                         <i class="fab fa-facebook-f"></i>
                     </a>
 
-                    <a class="btn btn__login btn__socials rounded-circle mx-3" href="#">
+                    <a class="btn btn__login btn__socials btn__socials-mobile rounded-circle mx-3" href="#">
                         <i class="fab fa-twitter"></i>
                     </a>
 
-                    <a class="btn btn__login btn__socials rounded-circle mr-3" href="#">
+                    <a class="btn btn__login btn__socials btn__socials-mobile rounded-circle mr-3" href="#">
                         <i class="fab fa-google"></i>
                     </a>
 
-                    <a class="btn btn__login btn__socials rounded-circle mr-3" href="#">
+                    <a class="btn btn__login btn__socials btn__socials-mobile rounded-circle mr-3" href="#">
                         <i class="fab fa-instagram"></i>
                     </a>
 
-                    <a class="btn btn__login btn__socials rounded-circle mr-3" href="#">
+                    <a class="btn btn__login btn__socials btn__socials-mobile rounded-circle mr-3" href="#">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
 
-                    <a class="btn btn__login btn__socials rounded-circle" href="#">
+                    <a class="btn btn__login btn__socials btn__socials-mobile rounded-circle" href="#">
                         <i class="fab fa-github"></i>
                     </a>
                 </section>

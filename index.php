@@ -26,7 +26,7 @@
     <section class="info">
         <div class="container info-text d-flex flex-column justify-content-center">
             <h1 class="info-text-1 mb-5">ABOUT</h1>
-            <h2 class="info-text-2 d-flex justify-content-center"> Family-Owned &amp; Operated</h2>
+            <h2 class="info-text-2 d-flex justify-content-center text-center"> Family-Owned &amp; Operated</h2>
             <div class="d-flex justify-content-center">
                 <hr class="yline">
             </div>            
@@ -115,7 +115,7 @@
                                                 ?>
                                             </div>
 
-                                            <div class="col-md-8 d-flex flex-column justify-content-center my-3">
+                                            <div class="col-md-8 d-flex flex-column justify-content-center my-3 food__info">
                                                 <h4 class="mb-0"><?php echo $title; ?></h4>
                                                 <p class="m-0 mb-3 food-detail"><?php echo $description; ?></p>
                                                 <p class="m-0">Price: <?php echo "$".$price; ?></p>                                              

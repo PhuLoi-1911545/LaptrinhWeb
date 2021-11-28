@@ -9,6 +9,5 @@ headerMenu.onclick = function() {
         mobileNavbar.classList.remove('d-none');
     } else {
         mobileNavbar.classList.add('d-none');
-    }
-    
+    }    
 }

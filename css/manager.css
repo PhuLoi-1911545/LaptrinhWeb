@@ -4,6 +4,14 @@
 }
 
 /* 1. Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
 .header__item {
     min-width: 80px;
     padding: 16px 20px 11px 20px;
@@ -31,6 +39,7 @@
 
 /* 2. Content */
 .content {
+    margin-top: 56px;
     background-color: #f1f2f6;
     min-height: calc(100vh - 113px);
 }

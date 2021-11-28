@@ -33,19 +33,19 @@
                                                 }
                                             ?>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="row" style="color: black;"><?php echo $values['title']; ?></div>
+                                        <div class="col-md-4 mobile__cart-info">
+                                            <div class="row text-white"><?php echo $values['title']; ?></div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <a class="p-2" href="<?php echo SITEURL; ?>cart.php?action=sub_quantity&id=<?php echo $values['id']; ?>">-</a>
+                                        <div class="col-md-3 mobile__cart-info">
+                                            <a class="p-2 text-white" href="<?php echo SITEURL; ?>cart.php?action=sub_quantity&id=<?php echo $values['id']; ?>">-</a>
                                             <input class="w-25 form__input text-center rounded" type="number" name="quantity" value="<?php echo $values['quantity']; ?>">
-                                            <a class="p-2" href="<?php echo SITEURL; ?>cart.php?action=add_quantity&id=<?php echo $values['id']; ?>">+</a>
+                                            <a class="p-2 text-white" href="<?php echo SITEURL; ?>cart.php?action=add_quantity&id=<?php echo $values['id']; ?>">+</a>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-2 text-white mobile__cart-info">
                                             <?php echo $values['price']; ?>
                                         </div>
-                                        <div class="col-md-1">
-                                            <a href="<?php echo SITEURL; ?>cart.php?action=delete&id=<?php echo $values['id']; ?>">&#10005;</a>
+                                        <div class="col-md-1 mobile__cart-info">
+                                            <a class="text-white" href="<?php echo SITEURL; ?>cart.php?action=delete&id=<?php echo $values['id']; ?>">&#10005;</a>
                                         </div>
                                     </div>
                                 <?php

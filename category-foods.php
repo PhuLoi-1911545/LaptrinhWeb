@@ -60,7 +60,7 @@
                                                 ?>
                                             </div>
 
-                                            <div class="col-md-8 d-flex flex-column justify-content-center my-3">
+                                            <div class="col-md-8 d-flex flex-column justify-content-center my-3 food__info">
                                                 <h4 class="mb-0"><?php echo $title; ?></h4>
                                                 <p class="m-0 mb-3 food-detail"><?php echo $description; ?></p>
                                                 <p class="m-0">Price: <?php echo "$".$price; ?></p>                                              
