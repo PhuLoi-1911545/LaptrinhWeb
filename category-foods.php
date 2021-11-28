@@ -17,12 +17,19 @@
     }
 ?>
 
+<<<<<<< Updated upstream
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">
             
             <h2>Foods on <a href="#" class="text-white">"<?php echo $category_title; ?>"</a></h2>
 
+=======
+    <!-- 1. Search -->
+    <section class="food-search img-search-anything text-center">
+        <div class="container">           
+            <h2 class="text-white">Foods on <a href="#" class="text-white">"<?php echo $category_title; ?>"</a></h2>
+>>>>>>> Stashed changes
         </div>
     </section>
     <!-- fOOD sEARCH Section Ends Here -->

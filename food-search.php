@@ -1,9 +1,15 @@
 <?php
     include('partials_front/header.php');
 ?>
+<<<<<<< Updated upstream
     <p style="margin-top: 190px;"></p>
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
+=======
+
+    <!-- 1. Search -->
+    <section class="food-search img-search-anything text-center">
+>>>>>>> Stashed changes
         <div class="container">
             
             <?php
