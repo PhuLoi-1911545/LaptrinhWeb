@@ -2,7 +2,7 @@
     include('partials_front/header.php');
 ?>
     <!-- 1. Background -->
-    <section class="food-search text-center"></section>
+    <section class="food-search img-category text-center"></section>
 
     <!-- 2. Categories -->
     <section class="categories-home">

@@ -18,7 +18,7 @@
 ?>
 
     <!-- 1. Search -->
-    <section class="food-search text-center">
+    <section class="food-search img-search text-center">
         <div class="container">           
             <h2 class="text-white">Foods on <a href="#" class="text-white">"<?php echo $category_title; ?>"</a></h2>
         </div>

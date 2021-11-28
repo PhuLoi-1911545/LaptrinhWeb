@@ -131,6 +131,13 @@ fieldset {
     background-image: url(../images/find.jpg);
 }
 
+.img-search {
+    background-image: url(../images/search.jpg);
+}
+.img-category{
+    background-image: url(../images/food.jpg);
+}
+
 /* 4. Info */
 .info{
     background-color: rgb(58, 58, 58);
