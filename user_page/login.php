@@ -84,7 +84,7 @@
         // 3. Check user existed or not
         $count = mysqli_num_rows($res);
         if ($count == 1) {
-            $_SESSION['login'] = "<h6 class='text-success text-center'> Login successfully! </h6>";
+            $_SESSION['login'] = "<h6 class='login-success text-center'> Login successfully! </h6>";
             $_SESSION['user'] = $username; // logged
             echo("<script>location.href = '".SITEURL."';</script>");
         } else {
