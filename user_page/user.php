@@ -63,24 +63,24 @@
                             <div class="row w-100">
                                 <form control="" class="form-group w-100">
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center">Full Name:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center">Full Name:</label>
                                         <div class="col-md-7 mb-3 p-2 pl-4"><?php echo $full_name; ?></div>
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center">Birthday:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center">Birthday:</label>
                                         <div class="col-md-7 mb-3 p-2 pl-4"><?php echo $birthday; ?></div>
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center">Phone:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center">Phone:</label>
                                         <div class="col-md-7 mb-3 p-2 pl-4"><?php echo $phone; ?></div>
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center">Email:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center">Email:</label>
                                         <div class="col-md-7 mb-3 p-2 pl-4"><?php echo $email; ?></div>
                                     </div>                                   
                                     <div class="row">
-                                        <a href="<?php echo SITEURL; ?>user_page/change_password.php?id=<?php echo $id; ?>" class="btn btn__login ml-5 user__btn mt-3 p-2">Change Password</a>
-                                        <a href="<?php echo SITEURL; ?>user_page/update_user.php?id=<?php echo $id; ?>" class="btn btn__login ml-5 user__btn mt-3 p-2">Update</a>
+                                        <a href="<?php echo SITEURL; ?>user_page/change_password.php?id=<?php echo $id; ?>" class="mobile__login btn btn__login ml-5 user__btn mt-3 p-2">Change Password</a>
+                                        <a href="<?php echo SITEURL; ?>user_page/update_user.php?id=<?php echo $id; ?>" class="mobile__login btn btn__login ml-5 user__btn mt-3 p-2">Update</a>
                                     </div>
                                 </form>
                             </div>

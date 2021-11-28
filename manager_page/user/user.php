@@ -4,7 +4,7 @@
 
     <!-- Content -->
     <div class="content">
-        <div class="py-3 px-5">
+        <div class="py-3 px-5 mobile__content">
             <h1 class="text-center primary-color mt-3">List of User</h1>
 
             <!-- Display session -->
@@ -30,7 +30,8 @@
                 }
             ?>
 
-            <table class="table table-striped mt-4">
+            <!-- pc -->
+            <table class="table table-striped mt-4 mobile__none tablet__none">
             <thead>
                 <tr>
                     <th scope="col" class="text-center">#</th>
@@ -108,6 +109,109 @@
                             ?>
                                 <tr>
                                     <td colspan="8"><div class="text-danger">No User</div></td>
+                                </tr>
+                            <?php
+                        }
+                    ?>
+                </tbody>
+            </table>
+
+            <!-- tablet -->
+            <table class="table table-striped mt-4 d-block d-xl-none mobile__none">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col" class="text-center">Username</th>
+                    <th scope="col" class="text-center">Email</th>
+                    <th scope="col" class="text-center">Operation</th>
+                </tr>
+            </thead>
+                <tbody>
+
+                    <?php
+                        // 1. SQL to get all user from db
+                        $sql1 = "SELECT * FROM users";
+                        $res1 = mysqli_query($connection, $sql1);
+                        
+                        $n = 1;
+
+                        $count1 = mysqli_num_rows($res1);
+
+                        if ($count1 > 0) {
+                            // 2. Get each user
+                            while ($row1 = mysqli_fetch_assoc($res1)) {
+                                $id = $row1['id'];
+                                $username = $row1['username'];
+                                $email = $row1['email'];
+
+                                ?>
+                                    <!-- 3. Display each user -->
+                                    <tr>
+                                        <th scope="row" class="text-center"><?php echo $n++; ?></th>
+                                        <td class="text-center"><?php echo $username; ?></td>
+                                        <td class="text-center"><?php echo $email; ?></td>
+                                        <td class="text-center">
+                                            <a href="<?php echo SITEURL; ?>manager_page/user/change_password.php?id=<?php echo $id; ?>" class="btn btn-outline-primary">Change Password</a>
+                                            <a href="<?php echo SITEURL; ?>manager_page/user/update_user.php?id=<?php echo $id; ?>" class="responsive__operation btn btn-outline-success mx-2">Update</a>
+                                            <a href="<?php echo SITEURL; ?>manager_page/user/delete_user.php?id=<?php echo $id; ?>" class="responsive__operation btn btn-outline-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                <?php
+                            }
+                        } else {
+                            ?>
+                                <tr>
+                                    <td colspan="4"><div class="text-danger">No User</div></td>
+                                </tr>
+                            <?php
+                        }
+                    ?>
+                </tbody>
+            </table>
+
+            <!-- mobile -->
+            <table class="table table-striped mt-4 d-block d-xl-none tablet__none">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col" class="text-center">Username</th>
+                    <th scope="col" class="text-center">Operation</th>
+                </tr>
+            </thead>
+                <tbody>
+
+                    <?php
+                        // 1. SQL to get all user from db
+                        $sql1 = "SELECT * FROM users";
+                        $res1 = mysqli_query($connection, $sql1);
+                        
+                        $n = 1;
+
+                        $count1 = mysqli_num_rows($res1);
+
+                        if ($count1 > 0) {
+                            // 2. Get each user
+                            while ($row1 = mysqli_fetch_assoc($res1)) {
+                                $id = $row1['id'];
+                                $username = $row1['username'];
+
+                                ?>
+                                    <!-- 3. Display each user -->
+                                    <tr>
+                                        <th scope="row" class="text-center"><?php echo $n++; ?></th>
+                                        <td class="text-center"><?php echo $username; ?></td>
+                                        <td class="text-center">
+                                            <a href="<?php echo SITEURL; ?>manager_page/user/change_password.php?id=<?php echo $id; ?>" class="btn btn-outline-primary">Change Password</a>
+                                            <a href="<?php echo SITEURL; ?>manager_page/user/update_user.php?id=<?php echo $id; ?>" class="responsive__operation btn btn-outline-success mx-2">Update</a>
+                                            <a href="<?php echo SITEURL; ?>manager_page/user/delete_user.php?id=<?php echo $id; ?>" class="responsive__operation btn btn-outline-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                <?php
+                            }
+                        } else {
+                            ?>
+                                <tr>
+                                    <td colspan="3"><div class="text-danger">No User</div></td>
                                 </tr>
                             <?php
                         }

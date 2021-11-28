@@ -18,7 +18,7 @@
     <!-- Header -->
     <div class="header border-bottom">
         <div class="py-3 container">
-            <div class="header__content mb-0 pl-0 d-flex justify-content-between">
+            <div class="header__content mb-0 pl-0 d-flex justify-content-between align-items-center">
                 <div>
                     <div class="">
                         <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/user_page/login.php" || $_SERVER['SCRIPT_NAME']=="/assignmentWEB/user_page/register.php") { ?>  class="header__item active"   <?php   }?> class="header__item" href="<?php echo SITEURL; ?>">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
 
-                <div class="d-flex">
+                <div class="d-flex mobile__none">
                     <?php
                         if (isset($_SESSION['user'])) {
                             $username = $_SESSION['user'];
@@ -58,7 +58,7 @@
                     ?>
                 </div>
                 
-                <div>
+                <div class="d-flex mobile__none">
                     <?php
                         if (isset($_SESSION['user'])) {
                             ?>
@@ -72,6 +72,58 @@
                         }
                     ?>
                 </div>
+
+                <div class="d-block d-md-none">
+                    <div class="">
+                        <a class="header__item header__menu text-right" href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </div>
+
+    <!-- mobile -->
+    <div class="mobile__navbar d-none flex-column d-md-none">
+        <?php
+            if (isset($_SESSION['user'])) {
+                $username = $_SESSION['user'];
+                $sql = "SELECT * FROM users WHERE username = '$username'";
+                $res = mysqli_query($connection, $sql);
+                $count = mysqli_num_rows($res);
+                if ($count == 1) {
+                    $row = mysqli_fetch_assoc($res);
+                    $id = $row['id'];                                  
+                }
+                ?>  
+                    <div class="ml-3">
+                        <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/user_page/user.php" || $_SERVER['SCRIPT_NAME']=="/assignmentWEB/user_page/update_user.php" || $_SERVER['SCRIPT_NAME']=="/assignmentWEB/user_page/change_password.php") { ?>  class="header__item active"   <?php   }?> class="header__item" href="<?php echo SITEURL; ?>user_page/user.php?id=<?php echo $id; ?>">
+                            <i class="fas fa-user"></i>
+                            My Information
+                        </a>
+                    </div>
+
+                    <div class="mt-3 ml-3">
+                        <a <?php if($_SERVER['SCRIPT_NAME']=="/assignmentWEB/user_page/feedback.php") { ?>  class="header__item active"   <?php   }?> class="header__item" href="<?php echo SITEURL; ?>user_page/feedback.php?id=<?php echo $id; ?>">
+                        <i class="fas fa-comments"></i>
+                            Feedback
+                        </a>
+                    </div>
+                <?php
+            }
+        ?>
+        <?php
+            if (isset($_SESSION['user'])) {
+                ?>
+                    <div class="mt-3 ml-3 mb-3">
+                        <a class="header__item" href="<?php echo SITEURL; ?>user_page/logout.php">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </div>
+                <?php
+            }
+        ?>
     </div>

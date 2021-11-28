@@ -1,24 +1,22 @@
 <?php
     include('partials_front/header.php');
 ?>
-
-    <!-- fOOD sEARCH Section Starts Here -->
+    <!-- <p style="margin-top: 150px;"></p> -->
+    <!-- 1. Search -->
     <section class="food-search text-center">
         <div class="container">
-            
             <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
-                <input type="search" name="search" placeholder="Search for Food.." required>
+                <input type="search" name="search" placeholder="Search for Food.." required class="pl-5">
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>
-
         </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
 
     <?php
         if (isset($_SESSION['login'])) {
             echo $_SESSION['login'];
             unset($_SESSION['login']);
+            //
         }
 
         if (isset($_SESSION['order'])) {
@@ -27,8 +25,20 @@
         }
     ?>
 
-    <!-- CAtegories Section Starts Here -->
-    <section class="categories">
+    <!-- 2. Info -->
+    <section class="info">
+        <div class="container info-text d-flex flex-column justify-content-center">
+            <h1 class="info-text-1 mb-5">ABOUT</h1>
+            <h2 class="info-text-2 d-flex justify-content-center"> Family-Owned &amp; Operated</h2>
+            <div class="d-flex justify-content-center">
+                <hr class="yline">
+            </div>            
+            <p class="info-text-3 mt-4"> VT2L was founded in 2021 in order to serve the​&nbsp;Bach Khoa community. Whether you’re looking to place a small order or need to fill the bellies of a large group, we have a variety of options for you to choose from. We understand that each customer has their own unique tastes and cravings, which is why we always customize our packages to satisfy each and every need.</p>
+        </div>
+    </section>
+
+    <!-- 3. Categories-->
+    <section class="categories-home">
         <div class="container">
             <h2 class="text-center">Explore Foods</h2>
 
@@ -51,7 +61,7 @@
                                     <?php
                                         if ($image_name != "") {
                                             ?>
-                                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" class="img-responsive img-curve">
+                                            <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" class="img-responsive img-curve img_category">
                                             <?php
                                         } else {
                                             echo "<h3 class='text-danger text-center'> Image not availables! </h3>"; 
@@ -71,12 +81,11 @@
             <div class="clearfix"></div>
         </div>
     </section>
-    <!-- Categories Section Ends Here -->
 
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
         <div class="container">
-            <h2 class="text-center">Food Menu</h2>
+            <h2 class="text-center">Best Selling</h2>
 
             <?php
                 $sql2 = "SELECT * FROM food WHERE featured='Yes' AND active='Yes' LIMIT 6";
@@ -122,6 +131,21 @@
                                             }
                                         ?>
                                     " class="btn btn-primary">Order Now</a>
+
+                                    <?php
+                                        if (isset($_SESSION['user'])) {
+                                            ?>
+                                                <form action="" method="POST">
+                                                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                                                    <input type="hidden" name="title" value="<?php echo $title; ?>">
+                                                    <input type="hidden" name="price" value="<?php echo $price; ?>">
+                                                    <input type="hidden" name="image_name" value="<?php echo $image_name; ?>">
+                                                    <input type="number" name="quantity" value="1">
+                                                    <input type="submit" value="Add to Cart" name="add_to_cart">
+                                                </form>
+                                            <?php
+                                        }
+                                    ?>
                                 </div>
                             </div>
                         <?php
@@ -142,4 +166,37 @@
 
 <?php
     include('partials_front/footer.php');
-?>   
+?>
+
+<!-- Program -->
+<?php
+    if (isset($_POST['add_to_cart'])) {
+        if (isset($_SESSION['cart'])) {
+            $cart_array_id = array_column($_SESSION['cart'], "id");
+            
+            if (!in_array($_POST['id'], $cart_array_id)) {
+                $count = count($_SESSION['cart']);
+                $cart_array = array(
+                    'id'            => $_POST['id'],
+                    'title'         => $_POST['title'],
+                    'quantity'      => $_POST['quantity'],
+                    'price'         => $_POST['price'],
+                    'image_name'    => $_POST['image_name']
+                );
+                $_SESSION['cart'][$count] = $cart_array;
+            } else {
+                echo "<script>alert('Item already added')</script>";
+                echo("<script>location.href = '".SITEURL."';</script>");
+            }
+        } else {
+            $cart_array = array(
+                'id'            => $_POST['id'],
+                'title'         => $_POST['title'],
+                'quantity'      => $_POST['quantity'],
+                'price'         => $_POST['price'],
+                'image_name'    => $_POST['image_name']
+            );
+            $_SESSION['cart'][0] = $cart_array;
+        }       
+    }
+?>

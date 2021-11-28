@@ -53,19 +53,19 @@
                             <div class="row w-100">
                                 <form control="" class="form-group w-100" method="POST">
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center">Food:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center">Food:</label>
                                         <div class="col-md-7 mb-3 p-2 pl-4"><?php echo $food; ?></div>
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center">Price:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center">Price:</label>
                                         <div class="col-md-7 mb-3 p-2 pl-4"><?php echo $price; ?></div>
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="quantity">Quantity:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="quantity">Quantity:</label>
                                         <input type="number" name="quantity" id="quantity" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $quantity; ?>">
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="status">Status:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="status">Status:</label>
                                         <select name="status" id="status" class="form__input col-md-7 mb-3 p-2 pl-4">
                                             <option <?php if($status=="Ordered") {echo "selected";} ?> value="Ordered">Ordered</option>
                                             <option <?php if($status=="On Delivery") {echo "selected";} ?> value="On Delivery">On Delivery</option>
@@ -74,23 +74,23 @@
                                         </select>
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="customer_name">Customer name:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="customer_name">Customer name:</label>
                                         <input type="text" name="customer_name" id="customer_name" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $customer_name; ?>">
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="customer_name">Customer contact:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="customer_name">Customer contact:</label>
                                         <input type="text" name="customer_contact" id="customer_contact" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $customer_contact; ?>">
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="customer_email">Customer email:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="customer_email">Customer email:</label>
                                         <input type="text" name="customer_email" id="customer_email" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $customer_email; ?>">
                                     </div> 
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="customer_address">Customer address:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="customer_address">Customer address:</label>
                                         <input type="text" name="customer_address" id="customer_address" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $customer_address; ?>">
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 ml-5 col-form-label text-center" for="note">Note:</label>
+                                        <label class="mobile__label col-md-3 ml-5 col-form-label text-center" for="note">Note:</label>
                                         <input type="text" name="note" id="note" class="form__input col-md-7 mb-3 p-2 pl-4" value="<?php echo $note; ?>">
                                     </div>    
                                     <div class="row mb-3">

@@ -2,6 +2,7 @@
     include('partials_front/header.php');
 ?>
 
+    <!-- <p style="margin-top: 190px;"></p> -->
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">

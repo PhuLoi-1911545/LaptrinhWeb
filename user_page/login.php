@@ -40,22 +40,22 @@
                             <div class="row w-100">
                                 <form control="" class="form-group w-100" method="POST">
                                     <div class="row">
-                                        <input type="text" name="username" id="username" class="form__input p-2 pl-5 my-3 mx-5" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" placeholder="Username">
+                                        <input type="text" name="username" id="username" class="form__input mobile__login p-2 pl-5 my-3 mx-5" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" placeholder="Username">
                                     </div>
                                     <div class="row">
-                                        <input type="password" name="password" id="password" class="form__input p-2 pl-5 my-3 mx-5" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" placeholder="Password">
+                                        <input type="password" name="password" id="password" class="form__input mobile__login p-2 pl-5 my-3 mx-5" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" placeholder="Password">
                                     </div>
                                     <div class="row">
-                                        <input type="submit" value="Login" name="submit" class="btn btn__login mx-5 mt-3 p-2">
+                                        <input type="submit" value="Login" name="submit" class="mobile__login btn btn__login mx-5 mt-3 p-2">
                                     </div>
                                 </form>
                             </div>
 
                             <div class="row w-100 d-flex justify-content-center">
-                                <a href="<?php echo SITEURL; ?>manager_page/login.php" class="btn btn__login manager__btn mx-5 mt-3 p-2">Login with Manager</a>
+                                <a href="<?php echo SITEURL; ?>manager_page/login.php" class="mobile__login btn btn__login manager__btn mx-5 mt-3 p-2">Login with Manager</a>
                             </div>
 
-                            <div class="row mt-5">
+                            <div class="row mt-5 text-center">
                                 <p>Don't have an account? <a href="<?php echo SITEURL; ?>user_page/register.php">Register Here</a></p>
                             </div>
                         </div>
