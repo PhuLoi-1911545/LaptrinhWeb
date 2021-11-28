@@ -15,6 +15,8 @@
             }
         ?>
         <div class="container">
+            <h3 class="dynamic-words text-center "> Welcome to VT2L Website </h3>
+
             <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required class="pl-5">
                 <input type="submit" name="submit" value="Search" class="btn btn__login btn__login-primary w-25">

@@ -3,7 +3,7 @@
 ?>
 
     <!-- 1. Search -->
-    <section class="food-search text-center">
+    <section class="food-search img-background-foods text-center">
         <div class="container">
             <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required class="pl-5">

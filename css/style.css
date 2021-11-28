@@ -106,7 +106,7 @@ fieldset {
 
 /* 3. Search */
 .food-search {
-    background-image: url(../images/food.jpg);
+    background-image: url(../images/welcome.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -125,6 +125,10 @@ fieldset {
 .food-search input[type="submit"] {
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.img-background-foods {
+    background-image: url(../images/find.jpg);
 }
 
 /* 4. Info */
@@ -369,4 +373,38 @@ fieldset {
         display: flex;
         justify-content: center;
     }
-}  
+}
+
+.login-success {
+    color: greenyellow;
+}
+
+.dynamic-words {
+    animation-duration: 8s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    color: khaki;
+    font-family: cursive;
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: 0%;
+    }
+
+    25% {
+        margin-left: 50%;
+    }
+
+    50% {
+        margin-left: 0%;
+    }
+
+    75% {
+        margin-left: -50%;
+    }
+
+    100% {
+        margin-left: 0%;
+    }
+}
