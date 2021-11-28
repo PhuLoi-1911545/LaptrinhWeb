@@ -33,7 +33,7 @@
                             $image_name = $row2['image_name'];
 
                             ?>
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-5">
                                     <div class="food-menu-box">
                                         <div class="row">
                                             <div class="col-md-4 d-flex align-items-center">
@@ -93,4 +93,37 @@
 
 <?php
     include('partials_front/footer.php');
+?>
+
+<!-- Program -->
+<?php
+    if (isset($_POST['add_to_cart'])) {
+        if (isset($_SESSION['cart'])) {
+            $cart_array_id = array_column($_SESSION['cart'], "id");
+            
+            if (!in_array($_POST['id'], $cart_array_id)) {
+                $count = count($_SESSION['cart']);
+                $cart_array = array(
+                    'id'            => $_POST['id'],
+                    'title'         => $_POST['title'],
+                    'quantity'      => $_POST['quantity'],
+                    'price'         => $_POST['price'],
+                    'image_name'    => $_POST['image_name']
+                );
+                $_SESSION['cart'][$count] = $cart_array;
+            } else {
+                echo "<script>alert('Item already added')</script>";
+                echo("<script>location.href = '".SITEURL."foods.php';</script>");
+            }
+        } else {
+            $cart_array = array(
+                'id'            => $_POST['id'],
+                'title'         => $_POST['title'],
+                'quantity'      => $_POST['quantity'],
+                'price'         => $_POST['price'],
+                'image_name'    => $_POST['image_name']
+            );
+            $_SESSION['cart'][0] = $cart_array;
+        }       
+    }
 ?>
