@@ -218,6 +218,9 @@ fieldset {
 .btn__socials {
     width: 50px !important;
     height: 50px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 8. Order */
@@ -230,7 +233,7 @@ fieldset {
 }
 
 .order {
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -360,9 +363,8 @@ fieldset {
     }
 
     .btn__socials-mobile {
-        margin-top: 10px;
         margin-right: 0 !important;
-        margin-left: 0 !important;
+        margin-left: 6px !important;
     }
 
     .food-order {
@@ -375,6 +377,8 @@ fieldset {
     }
 }
 
+
+/* ***** Keyframe ***** */
 .login-success {
     color: greenyellow;
 }

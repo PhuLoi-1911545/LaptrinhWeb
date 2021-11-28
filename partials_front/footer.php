@@ -49,7 +49,7 @@
                 <hr class="mb-4" />
 
                 <!-- Section: Social media -->
-                <section class="mb-4 text-center">
+                <section class="mb-4 d-flex justify-content-center">
                     <a class="btn btn__login btn__socials btn__socials-mobile rounded-circle" href="#">
                         <i class="fab fa-facebook-f"></i>
                     </a>
