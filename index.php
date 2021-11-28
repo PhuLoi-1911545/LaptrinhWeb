@@ -102,7 +102,7 @@
                             $image_name = $row2['image_name'];
 
                             ?>
-                                <div class="col-md-6">
+                                <div class="col-md-6 mt-5">
                                     <div class="food-menu-box">
                                         <div class="row">
                                             <div class="col-md-4 d-flex align-items-center">
@@ -119,7 +119,7 @@
 
                                             <div class="col-md-8 d-flex flex-column justify-content-center my-3 food__info">
                                                 <h4 class="mb-0"><?php echo $title; ?></h4>
-                                                <p class="m-0 mb-3 food-detail"><?php echo $description; ?></p>
+                                                <p class="m-0 mb-3 food-detail"><?php custom_echo($description, 100); ?></p>
                                                 <p class="m-0">Price: <?php echo "$".$price; ?></p>                                              
                                                 <?php
                                                     if (isset($_SESSION['user'])) {
