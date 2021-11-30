@@ -15,7 +15,7 @@
             }
         ?>
         <div class="container">
-            <h3 class="dynamic-words text-center "> Welcome to VT2L Website </h3>
+            <h3 class="dynamic-words text-center "> Welcome to HLANT Website </h3>
 
             <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required class="pl-5">
@@ -32,7 +32,7 @@
             <div class="d-flex justify-content-center">
                 <hr class="yline">
             </div>            
-            <p class="info-text-3 mt-4"> VT2L was founded in 2021 in order to serve the​&nbsp;Bach Khoa community. Whether you’re looking to place a small order or need to fill the bellies of a large group, we have a variety of options for you to choose from. We understand that each customer has their own unique tastes and cravings, which is why we always customize our packages to satisfy each and every need.</p>
+            <p class="info-text-3 mt-4"> HLANT was founded in 2021 in order to serve the​&nbsp;Bach Khoa community. Whether you’re looking to place a small order or need to fill the bellies of a large group, we have a variety of options for you to choose from. We understand that each customer has their own unique tastes and cravings, which is why we always customize our packages to satisfy each and every need.</p>
         </div>
     </section>
 

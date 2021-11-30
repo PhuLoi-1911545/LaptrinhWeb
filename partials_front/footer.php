@@ -7,7 +7,7 @@
                         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                             <h5 class="text-uppercase mb-3 info-text-1 text-dark h6">ABOUT</h5>
                             <p>
-                                VT2L was founded in 2021 in order to serve the​ Bach Khoa community. Whether you’re looking to place a small order or need to fill the bellies of a large group, we have a variety of options for you to choose from. We understand that each customer has their own unique tastes and cravings, which is why we always customize our packages to satisfy each and every need.
+                            HLANT was founded in 2021 in order to serve the​ Bach Khoa community. Whether you’re looking to place a small order or need to fill the bellies of a large group, we have a variety of options for you to choose from. We understand that each customer has their own unique tastes and cravings, which is why we always customize our packages to satisfy each and every need.
                             </p>
                         </div>
 
